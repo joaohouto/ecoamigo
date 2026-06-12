@@ -1,65 +1,154 @@
-import Image from "next/image";
+'use client'
+import { useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { motion } from 'motion/react'
+import { useGamepad } from '@/hooks/useGamepad'
+
+interface ItemMenu {
+  href: string
+  titulo: string
+  descricao: string
+  emoji: string
+  corFundo: string
+  corTexto: string
+}
+
+const itensMenu: ItemMenu[] = [
+  {
+    href: '/sons',
+    titulo: 'Sons do Pantanal',
+    descricao: 'Ouça o som e descubra qual animal fez esse barulho!',
+    emoji: '🎵',
+    corFundo: '#2D7D2D',
+    corTexto: '#fff',
+  },
+  {
+    href: '/quiz',
+    titulo: 'Quiz Pantanal',
+    descricao: 'Responda perguntas sobre o maior santuário natural do Brasil!',
+    emoji: '🌿',
+    corFundo: '#1565C0',
+    corTexto: '#fff',
+  },
+  {
+    href: '/placar',
+    titulo: 'Placar',
+    descricao: 'Veja quem são os maiores guardiões do Pantanal!',
+    emoji: '🏆',
+    corFundo: '#8B4513',
+    corTexto: '#fff',
+  },
+]
+
+const variantesContainer = {
+  oculto: {},
+  visivel: {
+    transition: { staggerChildren: 0.15 },
+  },
+}
+
+const variantesCard = {
+  oculto: { opacity: 0, y: 40 },
+  visivel: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+}
 
 export default function Home() {
+  const [foco, setFoco] = useState(0)
+  const router = useRouter()
+
+  useGamepad({
+    onEsquerda: () => setFoco((f) => Math.max(0, f - 1)),
+    onDireita: () => setFoco((f) => Math.min(itensMenu.length - 1, f + 1)),
+    onCima: () => setFoco((f) => Math.max(0, f - 1)),
+    onBaixo: () => setFoco((f) => Math.min(itensMenu.length - 1, f + 1)),
+    onConfirmar: () => router.push(itensMenu[foco].href),
+  })
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-8 bg-fundo">
+      {/* Cabeçalho */}
+      <motion.div
+        className="text-center mb-10"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1
+          className="text-5xl md:text-7xl lg:text-8xl text-verde-primario mb-3 leading-tight"
+          style={{ fontFamily: 'var(--font-fredoka)' }}
+        >
+          🌱 ECO AMIGO
+        </h1>
+        <p
+          className="text-xl md:text-2xl text-marrom-terra font-semibold"
+          style={{ fontFamily: 'var(--font-nunito)' }}
+        >
+          Juntos por um mundo mais verde!
+        </p>
+      </motion.div>
+
+      {/* Cards do menu */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-5xl"
+        variants={variantesContainer}
+        initial="oculto"
+        animate="visivel"
+      >
+        {itensMenu.map((item, idx) => (
+          <motion.div key={item.href} variants={variantesCard}>
+            <Link href={item.href} className="block">
+              <motion.div
+                className={`rounded-3xl p-8 cursor-pointer shadow-lg flex flex-col items-center text-center gap-4 select-none transition-shadow ${
+                  foco === idx ? 'ring-4 ring-white ring-offset-4 ring-offset-fundo shadow-2xl' : ''
+                }`}
+                style={{ backgroundColor: item.corFundo, color: item.corTexto }}
+                whileHover={{ scale: 1.05, rotate: 1 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              >
+                <span className="text-6xl md:text-7xl">{item.emoji}</span>
+                <h2
+                  className="text-2xl md:text-3xl font-bold leading-tight"
+                  style={{ fontFamily: 'var(--font-fredoka)' }}
+                >
+                  {item.titulo}
+                </h2>
+                <p
+                  className="text-sm md:text-base opacity-90"
+                  style={{ fontFamily: 'var(--font-nunito)' }}
+                >
+                  {item.descricao}
+                </p>
+              </motion.div>
+            </Link>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Rodapé */}
+      <motion.div
+        className="mt-12 text-center flex flex-col items-center gap-1"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+      >
+        <p
+          className="text-sm text-marrom-terra/70 font-semibold"
+          style={{ fontFamily: 'var(--font-nunito)' }}
+        >
+          Pantanal Tech — Stand Interativo
+        </p>
+        <p
+          className="text-xs text-marrom-terra/50"
+          style={{ fontFamily: 'var(--font-nunito)' }}
+        >
+          Uma realização do{' '}
+          <span className="font-semibold text-marrom-terra/70">
+            Curso de Direito da UEMS Aquidauana
+          </span>
+        </p>
+      </motion.div>
+    </main>
+  )
 }

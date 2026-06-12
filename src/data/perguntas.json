@@ -1,0 +1,354 @@
+[
+  {
+    "id": "a01",
+    "categoria": "animais",
+    "enunciado": "Qual é o pássaro símbolo do Pantanal, conhecido por suas longas pernas e bico curvo?",
+    "opcoes": ["Tucano", "Tuiuiú", "Garça", "Ema"],
+    "resposta_correta": 1,
+    "explicacao": "O Tuiuiú (Jaburu) é o símbolo do Pantanal e pode voar até 100 km por dia!"
+  },
+  {
+    "id": "a02",
+    "categoria": "animais",
+    "enunciado": "Qual é o maior roedor do mundo, muito comum no Pantanal?",
+    "opcoes": ["Ratão-do-banhado", "Capivara", "Paca", "Cotia"],
+    "resposta_correta": 1,
+    "explicacao": "A capivara pode pesar até 65 kg e é excelente nadadora!"
+  },
+  {
+    "id": "a03",
+    "categoria": "animais",
+    "enunciado": "Qual felino é o maior da América do Sul e habita o Pantanal?",
+    "opcoes": ["Puma", "Leopardo", "Onça-pintada", "Cheetah"],
+    "resposta_correta": 2,
+    "explicacao": "A onça-pintada é o maior felino das Américas e um predador de topo de cadeia!"
+  },
+  {
+    "id": "a04",
+    "categoria": "animais",
+    "enunciado": "Qual réptil é extremamente abundante no Pantanal, chegando a milhões de indivíduos?",
+    "opcoes": ["Iguana", "Jacaré-do-pantanal", "Cobra-coral", "Tartaruga"],
+    "resposta_correta": 1,
+    "explicacao": "O jacaré-do-pantanal é tão abundante que o Pantanal tem a maior concentração de jacarés do mundo!"
+  },
+  {
+    "id": "a05",
+    "categoria": "animais",
+    "enunciado": "Qual ave colorida é conhecida por seu bico grande e colorido?",
+    "opcoes": ["Arara", "Tucano", "Papagaio", "Periquito"],
+    "resposta_correta": 1,
+    "explicacao": "O tucano usa seu bico enorme para regular a temperatura corporal!"
+  },
+  {
+    "id": "a06",
+    "categoria": "animais",
+    "enunciado": "Qual mamífero parece um porco mas é mais parecido com cavalos e rinocerontes?",
+    "opcoes": ["Cateto", "Anta", "Queixada", "Tapir"],
+    "resposta_correta": 1,
+    "explicacao": "A anta é o maior mamífero terrestre do Brasil e ajuda a dispersar sementes!"
+  },
+  {
+    "id": "a07",
+    "categoria": "animais",
+    "enunciado": "Qual ave azul-e-amarela é ameaçada de extinção e vive em pares fiéis?",
+    "opcoes": ["Arara-azul", "Anaia", "Ararajuba", "Papagaio-verdadeiro"],
+    "resposta_correta": 0,
+    "explicacao": "A arara-azul é a maior arara do mundo e vive em casal para sempre!"
+  },
+  {
+    "id": "a08",
+    "categoria": "animais",
+    "enunciado": "Qual peixe de água doce pode dar choques elétricos para se defender?",
+    "opcoes": ["Piranha", "Pacu", "Poraquê", "Dourado"],
+    "resposta_correta": 2,
+    "explicacao": "O poraquê (enguia elétrica) pode gerar descargas de até 600 volts!"
+  },
+  {
+    "id": "a09",
+    "categoria": "animais",
+    "enunciado": "Qual animal do Pantanal come formigas e cupins com sua língua comprida?",
+    "opcoes": ["Tatu", "Tamanduá-bandeira", "Quati", "Gambá"],
+    "resposta_correta": 1,
+    "explicacao": "O tamanduá-bandeira come até 35.000 formigas por dia com sua língua pegajosa!"
+  },
+  {
+    "id": "a10",
+    "categoria": "animais",
+    "enunciado": "Qual lobo vive no Cerrado e Pantanal brasileiro, sendo o maior canídeo da América do Sul?",
+    "opcoes": ["Lobo-cinza", "Lobo-guará", "Cão-do-mato", "Lobinho"],
+    "resposta_correta": 1,
+    "explicacao": "O lobo-guará tem pernas compridas para enxergar por cima da vegetação alta!"
+  },
+  {
+    "id": "b01",
+    "categoria": "bioma",
+    "enunciado": "O Pantanal é considerado qual tipo de área natural?",
+    "opcoes": [
+      "A maior floresta tropical do mundo",
+      "A maior planície alagável do mundo",
+      "O maior deserto da América do Sul",
+      "O maior mangue do planeta"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O Pantanal é a maior planície alagável do planeta, cobrindo 150.000 km²!"
+  },
+  {
+    "id": "b02",
+    "categoria": "bioma",
+    "enunciado": "Em quais países o Pantanal está localizado?",
+    "opcoes": [
+      "Apenas no Brasil",
+      "Brasil e Argentina",
+      "Brasil, Bolívia e Paraguai",
+      "Brasil, Peru e Colômbia"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O Pantanal é compartilhado pelo Brasil, Bolívia e Paraguai, sendo 65% em território brasileiro!"
+  },
+  {
+    "id": "b03",
+    "categoria": "bioma",
+    "enunciado": "Qual é o principal rio que alimenta o Pantanal brasileiro?",
+    "opcoes": ["Rio Amazonas", "Rio Paraguai", "Rio São Francisco", "Rio Paraná"],
+    "resposta_correta": 1,
+    "explicacao": "O Rio Paraguai é a espinha dorsal do Pantanal e define as cheias e secas da região!"
+  },
+  {
+    "id": "b04",
+    "categoria": "bioma",
+    "enunciado": "O Pantanal foi reconhecido pela UNESCO como:",
+    "opcoes": [
+      "Parque Nacional",
+      "Patrimônio Natural da Humanidade",
+      "Área de Preservação Permanente",
+      "Reserva Florestal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em 2000, a UNESCO declarou o Pantanal Patrimônio Natural da Humanidade!"
+  },
+  {
+    "id": "b05",
+    "categoria": "bioma",
+    "enunciado": "O que caracteriza a época das chuvas no Pantanal?",
+    "opcoes": [
+      "Seca total com animais migrando",
+      "Cheias que inundam até 80% da planície",
+      "Neve nas partes mais altas",
+      "Ventos fortes e tempestades"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na cheia, até 80% do Pantanal fica submerso, criando um mar de água que concentra a biodiversidade!"
+  },
+  {
+    "id": "b06",
+    "categoria": "bioma",
+    "enunciado": "Quais estados brasileiros têm território no Pantanal?",
+    "opcoes": [
+      "Mato Grosso e Mato Grosso do Sul",
+      "Goiás e Minas Gerais",
+      "Tocantins e Pará",
+      "Rondônia e Acre"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O Pantanal brasileiro está nos estados de Mato Grosso e Mato Grosso do Sul!"
+  },
+  {
+    "id": "b07",
+    "categoria": "bioma",
+    "enunciado": "Quantas espécies de plantas já foram registradas no Pantanal?",
+    "opcoes": ["Cerca de 100", "Cerca de 500", "Mais de 1.700", "Mais de 10.000"],
+    "resposta_correta": 2,
+    "explicacao": "O Pantanal abriga mais de 1.700 espécies de plantas, além de 650 espécies de aves!"
+  },
+  {
+    "id": "b08",
+    "categoria": "bioma",
+    "enunciado": "Qual é a principal ameaça ao Pantanal atualmente?",
+    "opcoes": [
+      "Terremotos frequentes",
+      "Vulcões ativos na região",
+      "Desmatamento, queimadas e agrotóxicos",
+      "Tsunamis do Rio Paraguai"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Desmatamento, queimadas e uso de agrotóxicos na bacia do alto Paraguai ameaçam o Pantanal!"
+  },
+  {
+    "id": "b09",
+    "categoria": "bioma",
+    "enunciado": "O Pantanal funciona como um grande regulador natural. O que ele regula?",
+    "opcoes": [
+      "A velocidade dos ventos na América do Sul",
+      "A temperatura do oceano Atlântico",
+      "As cheias dos rios, filtrando a água e reduzindo enchentes",
+      "A quantidade de chuva na Amazônia"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O Pantanal age como uma esponja gigante que absorve as cheias e libera água gradualmente!"
+  },
+  {
+    "id": "b10",
+    "categoria": "bioma",
+    "enunciado": "Qual atividade econômica é tradicionalmente praticada no Pantanal?",
+    "opcoes": [
+      "Mineração de ouro",
+      "Pecuária extensiva e turismo de natureza",
+      "Pesca de alto mar",
+      "Cultivo de soja em larga escala"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A pecuária extensiva e o ecoturismo são as principais atividades econômicas sustentáveis do Pantanal!"
+  },
+  {
+    "id": "s01",
+    "categoria": "sustentabilidade",
+    "enunciado": "O que significa \"desenvolvimento sustentável\"?",
+    "opcoes": [
+      "Construir prédios muito altos",
+      "Usar os recursos naturais sem pensar no futuro",
+      "Atender às necessidades de hoje sem comprometer o futuro",
+      "Desenvolver apenas países ricos"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Sustentabilidade é usar os recursos naturais com sabedoria para que as próximas gerações também possam usufruir!"
+  },
+  {
+    "id": "s02",
+    "categoria": "sustentabilidade",
+    "enunciado": "Qual destas ações NÃO ajuda a preservar o meio ambiente?",
+    "opcoes": [
+      "Apagar as luzes quando sair do quarto",
+      "Deixar a torneira aberta enquanto escova os dentes",
+      "Usar sacolas reutilizáveis nas compras",
+      "Separar o lixo para reciclagem"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Deixar a torneira aberta ao escovar os dentes desperdiça até 12 litros de água por minuto!"
+  },
+  {
+    "id": "s03",
+    "categoria": "sustentabilidade",
+    "enunciado": "O que são energias renováveis?",
+    "opcoes": [
+      "Energia produzida a partir de petróleo",
+      "Energia que vem de fontes que se renovam naturalmente, como sol e vento",
+      "Energia nuclear de usinas",
+      "Energia produzida por queima de carvão"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Solar, eólica e hidráulica são renováveis porque a natureza as repõe naturalmente!"
+  },
+  {
+    "id": "s04",
+    "categoria": "sustentabilidade",
+    "enunciado": "O que significa o \"3R\" da sustentabilidade?",
+    "opcoes": [
+      "Reclamar, Recusar, Roubar",
+      "Reduzir, Reutilizar, Reciclar",
+      "Reconstruir, Restaurar, Renovar",
+      "Reparar, Reformar, Revender"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Os 3Rs — Reduzir o consumo, Reutilizar produtos e Reciclar materiais — são a base do consumo consciente!"
+  },
+  {
+    "id": "s05",
+    "categoria": "sustentabilidade",
+    "enunciado": "Por que plantar árvores ajuda o meio ambiente?",
+    "opcoes": [
+      "Árvores não têm impacto no ambiente",
+      "Elas absorvem CO₂ e produzem oxigênio, além de abrigar fauna",
+      "Árvores apenas servem para madeira",
+      "Elas consomem muita água e prejudicam rios"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Uma única árvore adulta pode absorver até 22 kg de CO₂ por ano e produzir oxigênio para 2 pessoas!"
+  },
+  {
+    "id": "s06",
+    "categoria": "sustentabilidade",
+    "enunciado": "O que é a pegada hídrica de um produto?",
+    "opcoes": [
+      "O tamanho do rastro molhado que o produto deixa",
+      "A quantidade de água usada para produzir aquele produto",
+      "A qualidade da água dentro do produto",
+      "O nível de umidade da embalagem"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Produzir 1 kg de carne bovina consome cerca de 15.400 litros de água — a pegada hídrica é enorme!"
+  },
+  {
+    "id": "c01",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Qual é a cor da lixeira destinada ao papel e papelão?",
+    "opcoes": ["Vermelha", "Azul", "Verde", "Amarela"],
+    "resposta_correta": 1,
+    "explicacao": "A lixeira AZUL recebe papel, papelão, jornais e revistas. Lembre: papel = azul!"
+  },
+  {
+    "id": "c02",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Qual é a cor da lixeira para plástico?",
+    "opcoes": ["Azul", "Verde", "Vermelha", "Amarela"],
+    "resposta_correta": 2,
+    "explicacao": "A lixeira VERMELHA recebe plásticos como garrafas PET, potes e sacolas!"
+  },
+  {
+    "id": "c03",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Qual é a cor da lixeira para vidro?",
+    "opcoes": ["Amarela", "Azul", "Verde", "Marrom"],
+    "resposta_correta": 2,
+    "explicacao": "A lixeira VERDE recebe vidro. Cuidado ao manusear — vidros quebrados podem machucar!"
+  },
+  {
+    "id": "c04",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Qual é a cor da lixeira para metais (latas, alumínio)?",
+    "opcoes": ["Verde", "Azul", "Vermelha", "Amarela"],
+    "resposta_correta": 3,
+    "explicacao": "A lixeira AMARELA recebe metais como latas de alumínio, aço e cobre. Lata = ouro = amarelo!"
+  },
+  {
+    "id": "c05",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Papel sujo de gordura (como papel de pizza) pode ser reciclado?",
+    "opcoes": [
+      "Sim, vai direto na lixeira azul",
+      "Não, a gordura contamina e ele vai no lixo orgânico",
+      "Sim, mas precisa ser lavado primeiro",
+      "Somente se for papel branco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Papel sujo de gordura contamina outros recicláveis e vai para o lixo orgânico ou comum!"
+  },
+  {
+    "id": "c06",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Qual é a cor da lixeira para resíduos orgânicos (restos de comida)?",
+    "opcoes": ["Cinza", "Marrom", "Laranja", "Roxo"],
+    "resposta_correta": 1,
+    "explicacao": "A lixeira MARROM recebe restos de comida e outros materiais orgânicos que viram adubo!"
+  },
+  {
+    "id": "c07",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Pilhas e baterias devem ser descartadas em qual local?",
+    "opcoes": [
+      "Na lixeira vermelha com os plásticos",
+      "Em pontos de coleta especiais para resíduos eletrônicos",
+      "Na lixeira marrom com o lixo orgânico",
+      "Podem ser jogadas no vaso sanitário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Pilhas contêm metais pesados tóxicos! Descarte em pontos específicos em supermercados e lojas!"
+  },
+  {
+    "id": "c08",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Quanto tempo uma garrafa de plástico PET leva para se decompor na natureza?",
+    "opcoes": ["1 ano", "10 anos", "100 anos", "Mais de 400 anos"],
+    "resposta_correta": 3,
+    "explicacao": "Uma garrafa PET demora mais de 400 anos para se decompor — por isso reciclar é tão importante!"
+  }
+]
