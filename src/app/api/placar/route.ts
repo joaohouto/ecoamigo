@@ -6,7 +6,7 @@ import type { Jogo } from '@/types'
 
 const SCORE_MAXIMO: Record<Jogo, number> = {
   sons: 6 * (100 + 50),   // 900
-  quiz: 15 * (100 + 50),  // 2250
+  quiz: 10 * (100 + 50),  // 1500
 }
 
 function getIP(req: NextRequest): string {

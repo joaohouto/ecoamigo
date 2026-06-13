@@ -6,8 +6,11 @@ export type CategoriaQuiz =
   | 'sustentabilidade'
   | 'coleta_seletiva'
 
+export type DificuldadePergunta = 'facil' | 'medio' | 'dificil'
+
 export interface Pergunta {
   id: string
+  dificuldade: DificuldadePergunta
   categoria: CategoriaQuiz
   enunciado: string
   opcoes: string[]         // sempre 4 opções

@@ -7,13 +7,15 @@ import { useRouter } from 'next/navigation'
 import todasPerguntas from '@/data/perguntas.json'
 import { useGameStore } from '@/store/gameStore'
 import { useGamepad } from '@/hooks/useGamepad'
+import { useGamepadStatus } from '@/hooks/useGamepadStatus'
 import type { Pergunta } from '@/types'
 import { tocarUI } from '@/lib/uiSounds'
 import GamepadHint from '@/components/GamepadHint'
 import DialogSair from '@/components/DialogSair'
+import { GamepadIcon } from '@/components/GamepadIcon'
 import { FEmoji } from '@/components/FEmoji'
 
-const TOTAL_PERGUNTAS = 15
+const TOTAL_PERGUNTAS = 10
 const TEMPO_MAX = 20
 const PONTOS_ACERTO = 100
 const BONUS_RAPIDO = 50
@@ -51,6 +53,7 @@ type FaseRodada = 'respondendo' | 'feedback'
 // ---------------------------------------------------------------------------
 
 function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
+  const { conectado, tipo } = useGamepadStatus()
   return (
     <main className="min-h-screen bg-fundo flex flex-col items-center justify-center gap-8 px-4">
       <motion.div
@@ -95,7 +98,7 @@ function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
           className="space-y-2 text-marrom-terra text-base"
           style={{ fontFamily: 'var(--font-nunito)' }}
         >
-          <li className="flex items-center gap-2"><FEmoji size={20}>🌿</FEmoji> {TOTAL_PERGUNTAS} perguntas aleatórias por rodada</li>
+          <li className="flex items-center gap-2"><FEmoji size={20}>🌿</FEmoji> {TOTAL_PERGUNTAS} perguntas por rodada (fácil ao difícil)</li>
           <li className="flex items-center gap-2"><FEmoji size={20}>⏱️</FEmoji> {TEMPO_MAX} segundos por pergunta</li>
           <li className="flex items-center gap-2"><FEmoji size={20}>✅</FEmoji> +{PONTOS_ACERTO} pts por resposta correta</li>
           <li className="flex items-center gap-2"><FEmoji size={20}>⚡</FEmoji> Resposta em menos de 5s = bônus de +{BONUS_RAPIDO} pts!</li>
@@ -107,22 +110,16 @@ function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
         onClick={onIniciar}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="px-12 py-4 bg-azul-reciclagem text-white rounded-full text-2xl font-bold shadow-lg hover:opacity-90 transition-opacity"
+        className="flex items-center gap-3 px-12 py-4 bg-azul-reciclagem text-white rounded-full text-2xl font-bold shadow-lg hover:opacity-90 transition-opacity"
         style={{ fontFamily: 'var(--font-fredoka)' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
+        {conectado && <GamepadIcon botao="confirmar" tipo={tipo} padrao size={26} />}
         Começar! <FEmoji size={22}>🌿</FEmoji>
       </motion.button>
 
-      <Link
-        href="/"
-        className="text-marrom-terra hover:text-azul-reciclagem transition-colors text-base"
-        style={{ fontFamily: 'var(--font-nunito)' }}
-      >
-        ← Voltar ao Menu
-      </Link>
     </main>
   )
 }
@@ -140,6 +137,7 @@ function TelaFinal({
   acertos: number
   onReiniciar: () => void
 }) {
+  const { conectado, tipo } = useGamepadStatus()
   const maximo = TOTAL_PERGUNTAS * (PONTOS_ACERTO + BONUS_RAPIDO)
   const pct = Math.round((acertos / TOTAL_PERGUNTAS) * 100)
 
@@ -214,21 +212,23 @@ function TelaFinal({
           onClick={onReiniciar}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-3 bg-azul-reciclagem text-white rounded-full text-xl font-bold hover:opacity-90 transition-opacity shadow"
+          className="flex items-center gap-2 px-8 py-3 bg-azul-reciclagem text-white rounded-full text-xl font-bold hover:opacity-90 transition-opacity shadow"
           style={{ fontFamily: 'var(--font-fredoka)' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
+          {conectado && <GamepadIcon botao="confirmar" tipo={tipo} padrao size={22} />}
           Jogar de novo!
         </motion.button>
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
           <Link
             href="/placar"
-            className="px-8 py-3 bg-verde-primario text-white rounded-full text-xl font-bold hover:bg-verde-acento transition-colors shadow block"
+            className="flex items-center gap-2 px-8 py-3 bg-verde-primario text-white rounded-full text-xl font-bold hover:bg-verde-acento transition-colors shadow"
             style={{ fontFamily: 'var(--font-fredoka)' }}
           >
+            {conectado && <GamepadIcon botao="acao" tipo={tipo} padrao size={22} />}
             Ver Placar
           </Link>
         </motion.div>
@@ -236,9 +236,10 @@ function TelaFinal({
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
           <Link
             href="/"
-            className="px-8 py-3 border-2 border-marrom-terra text-marrom-terra rounded-full text-xl font-bold hover:bg-marrom-terra hover:text-white transition-colors block"
+            className="flex items-center gap-2 px-8 py-3 border-2 border-marrom-terra text-marrom-terra rounded-full text-xl font-bold hover:bg-marrom-terra hover:text-white transition-colors"
             style={{ fontFamily: 'var(--font-fredoka)' }}
           >
+            {conectado && <GamepadIcon botao="voltar" tipo={tipo} padrao size={22} />}
             Menu
           </Link>
         </motion.div>
@@ -282,6 +283,7 @@ export default function QuizPage() {
     useGameStore()
   const router = useRouter()
   const [mostrarDialogSair, setMostrarDialogSair] = useState(false)
+  const { conectado } = useGamepadStatus()
 
   const [rodada, setRodada] = useState<Pergunta[]>([])
   const [indice, setIndice] = useState(0)
@@ -393,13 +395,22 @@ export default function QuizPage() {
       if (estado === 'jogando' && fase === 'respondendo') { pararTimer(); setMostrarDialogSair(true) }
       else if (estado === 'jogando') setMostrarDialogSair(true)
     },
+    onAcao: () => {
+      if (mostrarDialogSair) return
+      if (estado === 'finalizado') { router.push('/placar'); return }
+    },
   })
 
   const iniciar = useCallback(() => {
     tocarUI('iniciar')
     pararTimer()
     iniciarJogo('quiz')
-    const sorteadas = embaralhar(todasPerguntas as Pergunta[]).slice(0, TOTAL_PERGUNTAS)
+    // Seleção por dificuldade: 3 fácil + 4 médio + 3 difícil = 10
+    const banco = todasPerguntas as Pergunta[]
+    const faceis   = embaralhar(banco.filter(p => p.dificuldade === 'facil')).slice(0, 3)
+    const medias   = embaralhar(banco.filter(p => p.dificuldade === 'medio')).slice(0, 4)
+    const dificeis = embaralhar(banco.filter(p => p.dificuldade === 'dificil')).slice(0, 3)
+    const sorteadas = embaralhar([...faceis, ...medias, ...dificeis])
     setRodada(sorteadas)
     setIndice(0)
     setSelecionado(null)
@@ -460,6 +471,7 @@ export default function QuizPage() {
       <TelaFinal pontuacao={pontuacao} acertos={acertos} onReiniciar={iniciar} />
       <GamepadHint hints={[
         { botao: 'confirmar', label: 'Jogar de novo' },
+        { botao: 'acao', label: 'Ver Placar' },
         { botao: 'voltar', label: 'Menu' },
       ]} />
     </>
@@ -592,7 +604,7 @@ export default function QuizPage() {
                 text-left transition-all duration-200 cursor-pointer
                 disabled:cursor-default
                 ${estilos[variante]}
-                ${fase === 'respondendo' && i === foco ? 'ring-4 ring-yellow-400 ring-offset-1' : ''}
+                ${fase === 'respondendo' && i === foco && conectado ? 'ring-4 ring-yellow-400 ring-offset-1' : ''}
               `}
             >
               <span

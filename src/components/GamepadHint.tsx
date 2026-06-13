@@ -23,7 +23,7 @@ export default function GamepadHint({ hints }: Props) {
         fixed bottom-3 left-1/2 -translate-x-1/2 z-50
         whitespace-nowrap flex items-center gap-3
         pointer-events-none
-        ${conectado ? 'flex' : 'hidden lg:flex'}
+        ${conectado ? 'flex' : 'hidden'}
       `}
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}

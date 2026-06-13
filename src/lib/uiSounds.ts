@@ -42,7 +42,6 @@ export async function tocarUI(nome: SomUI): Promise<void> {
 
     const h = cache.get(nome)
     h.play()
-    console.log(`[uiSounds] tocarUI('${nome}') → ${ARQUIVOS[nome]}`)
   } catch {
     // Sons de UI são opcionais — falha silenciosa
   }

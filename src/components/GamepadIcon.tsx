@@ -1,7 +1,7 @@
 'use client'
 import type { TipoGamepad } from '@/hooks/useGamepadStatus'
 
-export type BotaoID = 'dpad' | 'confirmar' | 'voltar' | 'acao' | 'start'
+export type BotaoID = 'dpad' | 'confirmar' | 'voltar' | 'acao' | 'alternativo' | 'start'
 
 type IconDef = { t: 'face'; letter: string } | { t: 'dpad' } | { t: 'start' }
 
@@ -61,41 +61,69 @@ function StartIcon({ size }: SvgProps) {
   )
 }
 
-const ICONES: Record<TipoGamepad, Record<BotaoID, IconDef>> = {
+// Cores padrão dos botões físicos por tipo de controle
+const CORES_BOTAO: Record<TipoGamepad, Partial<Record<BotaoID, string>>> = {
   xbox: {
-    dpad:      { t: 'dpad' },
-    confirmar: { t: 'face', letter: 'A' },
-    voltar:    { t: 'face', letter: 'B' },
-    acao:      { t: 'face', letter: 'X' },
-    start:     { t: 'start' },
+    confirmar:   '#58B955',
+    voltar:      '#D74B2E',
+    acao:        '#4B9CD3',
+    alternativo: '#F9C125',
   },
   playstation: {
-    dpad:      { t: 'dpad' },
-    confirmar: { t: 'face', letter: '×' },
-    voltar:    { t: 'face', letter: '○' },
-    acao:      { t: 'face', letter: '□' },
-    start:     { t: 'start' },
+    confirmar:   '#3F88D4',
+    voltar:      '#D83F3F',
+    acao:        '#DC5090',
+    alternativo: '#47A663',
   },
   generico: {
-    dpad:      { t: 'dpad' },
-    confirmar: { t: 'face', letter: 'A' },
-    voltar:    { t: 'face', letter: 'B' },
-    acao:      { t: 'face', letter: 'X' },
-    start:     { t: 'start' },
+    confirmar:   '#58B955',
+    voltar:      '#D74B2E',
+    acao:        '#4B9CD3',
+    alternativo: '#F9C125',
+  },
+}
+
+const ICONES: Record<TipoGamepad, Record<BotaoID, IconDef>> = {
+  xbox: {
+    dpad:        { t: 'dpad' },
+    confirmar:   { t: 'face', letter: 'A' },
+    voltar:      { t: 'face', letter: 'B' },
+    acao:        { t: 'face', letter: 'X' },
+    alternativo: { t: 'face', letter: 'Y' },
+    start:       { t: 'start' },
+  },
+  playstation: {
+    dpad:        { t: 'dpad' },
+    confirmar:   { t: 'face', letter: '×' },
+    voltar:      { t: 'face', letter: '○' },
+    acao:        { t: 'face', letter: '□' },
+    alternativo: { t: 'face', letter: '△' },
+    start:       { t: 'start' },
+  },
+  generico: {
+    dpad:        { t: 'dpad' },
+    confirmar:   { t: 'face', letter: 'A' },
+    voltar:      { t: 'face', letter: 'B' },
+    acao:        { t: 'face', letter: 'X' },
+    alternativo: { t: 'face', letter: 'Y' },
+    start:       { t: 'start' },
   },
 }
 
 interface GamepadIconProps {
   botao: BotaoID
   tipo: TipoGamepad
-  /** Cor de preenchimento do ícone. Quando definida, texto fica branco. */
+  /** Cor explícita. Quando definida, texto fica branco. */
   color?: string
+  /** Usa a cor padrão do botão físico (A=verde, B=vermelho, X=azul…). */
+  padrao?: boolean
   size?: number
 }
 
-export function GamepadIcon({ botao, tipo, color, size = 18 }: GamepadIconProps) {
+export function GamepadIcon({ botao, tipo, color, padrao = false, size = 18 }: GamepadIconProps) {
+  const efetivo = color ?? (padrao ? CORES_BOTAO[tipo]?.[botao] : undefined)
   const def = ICONES[tipo][botao]
   if (def.t === 'dpad')  return <DpadIcon size={size} />
   if (def.t === 'start') return <StartIcon size={size} />
-  return <FaceButton letter={def.letter} size={size} color={color} />
+  return <FaceButton letter={def.letter} size={size} color={efetivo} />
 }

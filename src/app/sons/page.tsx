@@ -23,21 +23,35 @@ const BONUS_MEDIO = 25;
 const DURACAO_FEEDBACK_MS = 1800;
 
 const EMOJI_ANIMAIS: Record<string, string> = {
-  tuiuiu: "🦤",
-  jacare: "🐊",
+  tuiuiu:   "🦤",
+  urutau:   "🦉",
+  jacare:   "🐊",
   capivara: "🐾",
-  arara: "🦜",
-  onca: "🐆",
-  anta: "🦏",
+  arara:    "🦜",
+  onca:     "🐆",
+  anta:     "🦏",
+  seriema:  "🦅",
+  loboguara: "🐺",
+  bemtevi:  "🐦",
+  cervo:    "🦌",
+  tamandua: "🐜",
+  papagaio: "🦜",
 };
 
 const CORES_CARD: Record<string, string> = {
-  tuiuiu: "#E3F2FD",
-  jacare: "#E8F5E9",
+  tuiuiu:   "#E3F2FD",
+  urutau:   "#EDE7F6",
+  jacare:   "#E8F5E9",
   capivara: "#FFF3E0",
-  arara: "#FCE4EC",
-  onca: "#FFF9C4",
-  anta: "#F3E5F5",
+  arara:    "#FCE4EC",
+  onca:     "#FFF9C4",
+  anta:     "#F3E5F5",
+  seriema:  "#FFF8E1",
+  loboguara: "#FFEBEE",
+  bemtevi:  "#E8F5E9",
+  cervo:    "#FBE9E7",
+  tamandua: "#F9FBE7",
+  papagaio: "#E0F7FA",
 };
 
 function embaralhar<T>(arr: T[]): T[] {
@@ -72,9 +86,10 @@ function AnimalCard({
   focado,
 }: AnimalCardProps) {
   const [imgErro, setImgErro] = useState(false);
+  const { conectado } = useGamepadStatus();
 
   const bordas: Record<EstadoCard, string> = {
-    normal: `border-transparent hover:border-verde-acento hover:shadow-lg${focado ? " ring-4 ring-yellow-400 ring-offset-2" : ""}`,
+    normal: `border-transparent hover:border-verde-acento hover:shadow-lg${focado && conectado ? " ring-4 ring-yellow-400 ring-offset-2" : ""}`,
     correto: "border-verde-acento bg-green-50",
     errado: "border-red-400 bg-red-50",
     neutro: "border-transparent opacity-50",
@@ -94,7 +109,7 @@ function AnimalCard({
       `}
     >
       <div
-        className="w-28 h-28 md:w-36 md:h-36 rounded-xl flex items-center justify-center overflow-hidden"
+        className="w-full aspect-[4/3] rounded-xl overflow-hidden flex items-center justify-center"
         style={{ backgroundColor: CORES_CARD[animal.id] ?? "#F5F5E8" }}
       >
         {!imgErro ? (
@@ -102,11 +117,11 @@ function AnimalCard({
           <img
             src={animal.imagemUrl}
             alt={animal.nomeExibicao}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
             onError={() => setImgErro(true)}
           />
         ) : (
-          <FEmoji size={100}>{EMOJI_ANIMAIS[animal.id] ?? "🐾"}</FEmoji>
+          <FEmoji size={110}>{EMOJI_ANIMAIS[animal.id] ?? "🐾"}</FEmoji>
         )}
       </div>
 
@@ -148,6 +163,7 @@ function AnimalCard({
 // ---------------------------------------------------------------------------
 
 function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
+  const { conectado, tipo } = useGamepadStatus();
   return (
     <main className="min-h-screen bg-fundo flex flex-col items-center justify-center gap-8 px-4">
       <motion.div
@@ -203,22 +219,16 @@ function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
         onClick={onIniciar}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="px-12 py-4 bg-verde-primario text-white rounded-full text-2xl font-bold shadow-lg hover:bg-verde-acento transition-colors"
+        className="flex items-center gap-3 px-12 py-4 bg-verde-primario text-white rounded-full text-2xl font-bold shadow-lg hover:bg-verde-acento transition-colors"
         style={{ fontFamily: "var(--font-fredoka)" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
+        {conectado && <GamepadIcon botao="confirmar" tipo={tipo} padrao size={26} />}
         Começar! <FEmoji size={22}>🌿</FEmoji>
       </motion.button>
 
-      <Link
-        href="/"
-        className="text-marrom-terra hover:text-verde-primario transition-colors text-base"
-        style={{ fontFamily: "var(--font-nunito)" }}
-      >
-        ← Voltar ao Menu
-      </Link>
     </main>
   );
 }
@@ -234,6 +244,7 @@ function TelaFinal({
   pontuacao: number;
   onReiniciar: () => void;
 }) {
+  const { conectado, tipo } = useGamepadStatus();
   const maximo = TOTAL_RODADAS * (PONTOS_ACERTO + BONUS_RAPIDO);
   const pct = Math.round((pontuacao / maximo) * 100);
 
@@ -304,12 +315,13 @@ function TelaFinal({
           onClick={onReiniciar}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-3 bg-verde-primario text-white rounded-full text-xl font-bold hover:bg-verde-acento transition-colors shadow"
+          className="flex items-center gap-2 px-8 py-3 bg-verde-primario text-white rounded-full text-xl font-bold hover:bg-verde-acento transition-colors shadow"
           style={{ fontFamily: "var(--font-fredoka)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
+          {conectado && <GamepadIcon botao="confirmar" tipo={tipo} padrao size={22} />}
           Jogar de novo!
         </motion.button>
 
@@ -320,9 +332,10 @@ function TelaFinal({
         >
           <Link
             href="/placar"
-            className="px-8 py-3 bg-azul-reciclagem text-white rounded-full text-xl font-bold hover:opacity-90 transition-opacity shadow block"
+            className="flex items-center gap-2 px-8 py-3 bg-azul-reciclagem text-white rounded-full text-xl font-bold hover:opacity-90 transition-opacity shadow"
             style={{ fontFamily: "var(--font-fredoka)" }}
           >
+            {conectado && <GamepadIcon botao="acao" tipo={tipo} padrao size={22} />}
             Ver Placar
           </Link>
         </motion.div>
@@ -334,9 +347,10 @@ function TelaFinal({
         >
           <Link
             href="/"
-            className="px-8 py-3 border-2 border-marrom-terra text-marrom-terra rounded-full text-xl font-bold hover:bg-marrom-terra hover:text-white transition-colors block"
+            className="flex items-center gap-2 px-8 py-3 border-2 border-marrom-terra text-marrom-terra rounded-full text-xl font-bold hover:bg-marrom-terra hover:text-white transition-colors"
             style={{ fontFamily: "var(--font-fredoka)" }}
           >
+            {conectado && <GamepadIcon botao="voltar" tipo={tipo} padrao size={22} />}
             Menu
           </Link>
         </motion.div>
@@ -366,6 +380,7 @@ export default function SonsPage() {
 
   const howlRef = useRef<HowlType | null>(null);
   const [mostrarDialogSair, setMostrarDialogSair] = useState(false);
+  const [repetindo, setRepetindo] = useState(false);
   const { tipo: tipoGamepad } = useGamepadStatus();
 
   // Refs — garantem que os handlers do gamepad sempre leem valores atuais,
@@ -406,11 +421,13 @@ export default function SonsPage() {
       setOpcoes(novasOpcoes);
       setSelecionado(null);
       setAcertou(null);
+      setRepetindo(false);
       setFase("tocando");
+      setTempoInicio(Date.now()); // cronômetro começa quando o som inicia
 
       carregarESom(correto.somUrl, () => {
-        setFase("aguardando");
-        setTempoInicio(Date.now());
+        // Só avança se o usuário ainda não respondeu durante o som
+        setFase((prev) => (prev === "tocando" ? "aguardando" : prev));
       });
     },
     [carregarESom],
@@ -450,25 +467,25 @@ export default function SonsPage() {
   // Gamepad — grid 2×2: esq/dir ±1 coluna, cima/baixo ±1 linha (wrap circular)
   useGamepad({
     onEsquerda: () => {
-      if (!mostrarDialogSair && fase === "aguardando") {
+      if (!mostrarDialogSair && fase !== "respondido") {
         setFoco((f) => (f - 1 + 4) % 4);
         tocarUI("navegar");
       }
     },
     onDireita: () => {
-      if (!mostrarDialogSair && fase === "aguardando") {
+      if (!mostrarDialogSair && fase !== "respondido") {
         setFoco((f) => (f + 1) % 4);
         tocarUI("navegar");
       }
     },
     onCima: () => {
-      if (!mostrarDialogSair && fase === "aguardando") {
+      if (!mostrarDialogSair && fase !== "respondido") {
         setFoco((f) => (f - 2 + 4) % 4);
         tocarUI("navegar");
       }
     },
     onBaixo: () => {
-      if (!mostrarDialogSair && fase === "aguardando") {
+      if (!mostrarDialogSair && fase !== "respondido") {
         setFoco((f) => (f + 2) % 4);
         tocarUI("navegar");
       }
@@ -482,7 +499,7 @@ export default function SonsPage() {
         iniciar();
         return;
       }
-      if (fase === "aguardando" && opcoes[foco]) responder(opcoes[foco]);
+      if (fase !== "respondido" && opcoes[foco]) responder(opcoes[foco]);
     },
     onVoltar: () => {
       if (mostrarDialogSair) {
@@ -496,26 +513,42 @@ export default function SonsPage() {
       if (estado === "jogando") setMostrarDialogSair(true);
     },
     onAcao: () => {
-      if (!mostrarDialogSairRef.current && faseRef.current === "aguardando")
-        repetirSom();
+      if (mostrarDialogSairRef.current) return;
+      if (estado === "finalizado") { router.push("/placar"); return; }
+      if (faseRef.current === "aguardando") repetirSom();
     },
   });
 
   const repetirSom = () => {
     const animal = animalCorretoRef.current;
     if (!animal || faseRef.current !== "aguardando") return;
+    // Para o som anterior sem atribuir onstop — o callback assíncrono do onstop
+    // chegaria depois do setRepetindo(true) e apagaria a animação
+    howlRef.current?.off();
     howlRef.current?.stop();
     howlRef.current?.unload();
+    setRepetindo(true);
     import("howler").then(({ Howl }) => {
-      const h = new Howl({ src: [animal.somUrl], html5: true });
+      const h = new Howl({
+        src: [animal.somUrl],
+        html5: true,
+        onend: () => setRepetindo(false),
+        onloaderror: () => setRepetindo(false),
+      });
       howlRef.current = h as unknown as HowlType;
       h.play();
     });
   };
 
   const responder = (animal: Animal) => {
-    if (fase !== "aguardando" || !animalCorreto) return;
+    if (fase === "respondido" || !animalCorreto) return;
 
+    // Para o som se o usuário respondeu antes dele terminar
+    if (fase === "tocando") {
+      howlRef.current?.stop();
+    }
+
+    setRepetindo(false);
     tocarUI("selecionar");
 
     const correto = animal.id === animalCorreto.id;
@@ -565,6 +598,7 @@ export default function SonsPage() {
         <GamepadHint
           hints={[
             { botao: "confirmar", label: "Jogar de novo" },
+            { botao: "acao", label: "Ver Placar" },
             { botao: "voltar", label: "Menu" },
           ]}
         />
@@ -667,20 +701,26 @@ export default function SonsPage() {
             >
               Qual animal faz esse som?
             </p>
-            <button
+            <motion.button
               onClick={repetirSom}
               disabled={fase === "respondido"}
-              className="flex items-center gap-2 px-5 py-2 bg-verde-primario/10 hover:bg-verde-primario/20 disabled:opacity-40 text-verde-primario rounded-full transition-colors text-sm font-bold"
+              animate={repetindo ? { scale: [1, 1.04, 1] } : {}}
+              transition={{ repeat: Infinity, duration: 0.6 }}
+              className={`flex items-center gap-2 px-5 py-2 rounded-full transition-colors text-sm font-bold disabled:opacity-40 ${
+                repetindo
+                  ? "bg-verde-primario text-white shadow"
+                  : "bg-verde-primario/10 hover:bg-verde-primario/20 text-verde-primario"
+              }`}
               style={{ fontFamily: "var(--font-nunito)" }}
             >
               <GamepadIcon
                 botao="acao"
                 tipo={tipoGamepad}
-                color="#4CAF50"
+                color={repetindo ? "rgba(255,255,255,0.35)" : "#4CAF50"}
                 size={20}
               />
-              Ouvir de novo
-            </button>
+              {repetindo ? "Tocando..." : "Ouvir de novo"}
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -707,8 +747,8 @@ export default function SonsPage() {
               animal={animal}
               estadoCard={estadoCard}
               onClick={() => responder(animal)}
-              disabled={fase !== "aguardando"}
-              focado={fase === "aguardando" && opcoes.indexOf(animal) === foco}
+              disabled={fase === "respondido"}
+              focado={fase !== "respondido" && opcoes.indexOf(animal) === foco}
             />
           );
         })}

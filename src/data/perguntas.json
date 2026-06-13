@@ -1,14 +1,16 @@
 [
   {
     "id": "a01",
+    "dificuldade": "facil",
     "categoria": "animais",
-    "enunciado": "Qual é o pássaro símbolo do Pantanal, conhecido por suas longas pernas e bico curvo?",
+    "enunciado": "Qual é o pássaro símbolo do Pantanal, conhecido por suas longas pernas?",
     "opcoes": ["Tucano", "Tuiuiú", "Garça", "Ema"],
     "resposta_correta": 1,
     "explicacao": "O Tuiuiú (Jaburu) é o símbolo do Pantanal e pode voar até 100 km por dia!"
   },
   {
     "id": "a02",
+    "dificuldade": "facil",
     "categoria": "animais",
     "enunciado": "Qual é o maior roedor do mundo, muito comum no Pantanal?",
     "opcoes": ["Ratão-do-banhado", "Capivara", "Paca", "Cotia"],
@@ -17,6 +19,7 @@
   },
   {
     "id": "a03",
+    "dificuldade": "facil",
     "categoria": "animais",
     "enunciado": "Qual felino é o maior da América do Sul e habita o Pantanal?",
     "opcoes": ["Puma", "Leopardo", "Onça-pintada", "Cheetah"],
@@ -25,6 +28,7 @@
   },
   {
     "id": "a04",
+    "dificuldade": "facil",
     "categoria": "animais",
     "enunciado": "Qual réptil é extremamente abundante no Pantanal, chegando a milhões de indivíduos?",
     "opcoes": ["Iguana", "Jacaré-do-pantanal", "Cobra-coral", "Tartaruga"],
@@ -33,6 +37,7 @@
   },
   {
     "id": "a05",
+    "dificuldade": "medio",
     "categoria": "animais",
     "enunciado": "Qual ave colorida é conhecida por seu bico grande e colorido?",
     "opcoes": ["Arara", "Tucano", "Papagaio", "Periquito"],
@@ -41,22 +46,25 @@
   },
   {
     "id": "a06",
+    "dificuldade": "medio",
     "categoria": "animais",
-    "enunciado": "Qual mamífero parece um porco mas é mais parecido com cavalos e rinocerontes?",
+    "enunciado": "Qual mamífero parece um porco mas é parente de cavalos e rinocerontes?",
     "opcoes": ["Cateto", "Anta", "Queixada", "Tapir"],
     "resposta_correta": 1,
     "explicacao": "A anta é o maior mamífero terrestre do Brasil e ajuda a dispersar sementes!"
   },
   {
     "id": "a07",
+    "dificuldade": "medio",
     "categoria": "animais",
-    "enunciado": "Qual ave azul-e-amarela é ameaçada de extinção e vive em pares fiéis?",
+    "enunciado": "Qual ave azul-e-amarela é ameaçada de extinção e vive em pares fiéis para sempre?",
     "opcoes": ["Arara-azul", "Anaia", "Ararajuba", "Papagaio-verdadeiro"],
     "resposta_correta": 0,
     "explicacao": "A arara-azul é a maior arara do mundo e vive em casal para sempre!"
   },
   {
     "id": "a08",
+    "dificuldade": "dificil",
     "categoria": "animais",
     "enunciado": "Qual peixe de água doce pode dar choques elétricos para se defender?",
     "opcoes": ["Piranha", "Pacu", "Poraquê", "Dourado"],
@@ -65,22 +73,71 @@
   },
   {
     "id": "a09",
+    "dificuldade": "medio",
     "categoria": "animais",
-    "enunciado": "Qual animal do Pantanal come formigas e cupins com sua língua comprida?",
+    "enunciado": "Qual animal do Pantanal come formigas e cupins com sua língua comprida e pegajosa?",
     "opcoes": ["Tatu", "Tamanduá-bandeira", "Quati", "Gambá"],
     "resposta_correta": 1,
     "explicacao": "O tamanduá-bandeira come até 35.000 formigas por dia com sua língua pegajosa!"
   },
   {
     "id": "a10",
+    "dificuldade": "medio",
     "categoria": "animais",
-    "enunciado": "Qual lobo vive no Cerrado e Pantanal brasileiro, sendo o maior canídeo da América do Sul?",
+    "enunciado": "Qual lobo vive no Cerrado e Pantanal, sendo o maior canídeo da América do Sul?",
     "opcoes": ["Lobo-cinza", "Lobo-guará", "Cão-do-mato", "Lobinho"],
     "resposta_correta": 1,
     "explicacao": "O lobo-guará tem pernas compridas para enxergar por cima da vegetação alta!"
   },
   {
+    "id": "a11",
+    "dificuldade": "medio",
+    "categoria": "animais",
+    "enunciado": "O que a arara-azul come principalmente no Pantanal?",
+    "opcoes": [
+      "Peixe e camarão de rio",
+      "Folhas e bambu verde",
+      "Sementes das palmeiras acuri e bocaiuva",
+      "Insetos e frutas pequenas"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A arara-azul tem bico fortíssimo capaz de quebrar as sementes mais duras das palmeiras do Pantanal!"
+  },
+  {
+    "id": "a12",
+    "dificuldade": "dificil",
+    "categoria": "animais",
+    "enunciado": "Como se chama o padrão de manchas pretas em formato de anel no pelo da onça-pintada?",
+    "opcoes": ["Tigrado", "Roseta", "Mosqueado", "Listrado"],
+    "resposta_correta": 1,
+    "explicacao": "Cada onça tem rosetas únicas — como digitais humanas. Pesquisadores usam isso para identificar cada animal individualmente!"
+  },
+  {
+    "id": "a13",
+    "dificuldade": "dificil",
+    "categoria": "animais",
+    "enunciado": "Qual é o maior peixe de escamas de água doce do mundo, encontrado na América do Sul?",
+    "opcoes": ["Pintado", "Tucunaré", "Pirarucu", "Dourado"],
+    "resposta_correta": 2,
+    "explicacao": "O pirarucu pode passar de 3 metros e 250 kg. Por respirar ar, ele sobe à superfície a cada 5-20 minutos!"
+  },
+  {
+    "id": "a14",
+    "dificuldade": "dificil",
+    "categoria": "animais",
+    "enunciado": "O boto-rosa, encontrado em rios do Pantanal e da Amazônia, é um:",
+    "opcoes": [
+      "Peixe de água doce com coloração rosada",
+      "Golfinho de água doce, o maior do mundo",
+      "Tipo de flamingo brasileiro",
+      "Crocodilo albino raro"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O boto-rosa é o maior golfinho de água doce do mundo e sua cor fica mais intensa com a idade!"
+  },
+  {
     "id": "b01",
+    "dificuldade": "facil",
     "categoria": "bioma",
     "enunciado": "O Pantanal é considerado qual tipo de área natural?",
     "opcoes": [
@@ -94,6 +151,7 @@
   },
   {
     "id": "b02",
+    "dificuldade": "medio",
     "categoria": "bioma",
     "enunciado": "Em quais países o Pantanal está localizado?",
     "opcoes": [
@@ -107,6 +165,7 @@
   },
   {
     "id": "b03",
+    "dificuldade": "medio",
     "categoria": "bioma",
     "enunciado": "Qual é o principal rio que alimenta o Pantanal brasileiro?",
     "opcoes": ["Rio Amazonas", "Rio Paraguai", "Rio São Francisco", "Rio Paraná"],
@@ -115,6 +174,7 @@
   },
   {
     "id": "b04",
+    "dificuldade": "medio",
     "categoria": "bioma",
     "enunciado": "O Pantanal foi reconhecido pela UNESCO como:",
     "opcoes": [
@@ -128,19 +188,21 @@
   },
   {
     "id": "b05",
+    "dificuldade": "facil",
     "categoria": "bioma",
-    "enunciado": "O que caracteriza a época das chuvas no Pantanal?",
+    "enunciado": "O que acontece com o Pantanal na época das chuvas?",
     "opcoes": [
       "Seca total com animais migrando",
       "Cheias que inundam até 80% da planície",
       "Neve nas partes mais altas",
-      "Ventos fortes e tempestades"
+      "Ventos fortes e tempestades de areia"
     ],
     "resposta_correta": 1,
     "explicacao": "Na cheia, até 80% do Pantanal fica submerso, criando um mar de água que concentra a biodiversidade!"
   },
   {
     "id": "b06",
+    "dificuldade": "medio",
     "categoria": "bioma",
     "enunciado": "Quais estados brasileiros têm território no Pantanal?",
     "opcoes": [
@@ -154,6 +216,7 @@
   },
   {
     "id": "b07",
+    "dificuldade": "dificil",
     "categoria": "bioma",
     "enunciado": "Quantas espécies de plantas já foram registradas no Pantanal?",
     "opcoes": ["Cerca de 100", "Cerca de 500", "Mais de 1.700", "Mais de 10.000"],
@@ -162,6 +225,7 @@
   },
   {
     "id": "b08",
+    "dificuldade": "facil",
     "categoria": "bioma",
     "enunciado": "Qual é a principal ameaça ao Pantanal atualmente?",
     "opcoes": [
@@ -175,6 +239,7 @@
   },
   {
     "id": "b09",
+    "dificuldade": "dificil",
     "categoria": "bioma",
     "enunciado": "O Pantanal funciona como um grande regulador natural. O que ele regula?",
     "opcoes": [
@@ -188,8 +253,9 @@
   },
   {
     "id": "b10",
+    "dificuldade": "medio",
     "categoria": "bioma",
-    "enunciado": "Qual atividade econômica é tradicionalmente praticada no Pantanal?",
+    "enunciado": "Qual atividade econômica é tradicionalmente praticada no Pantanal de forma sustentável?",
     "opcoes": [
       "Mineração de ouro",
       "Pecuária extensiva e turismo de natureza",
@@ -197,23 +263,85 @@
       "Cultivo de soja em larga escala"
     ],
     "resposta_correta": 1,
-    "explicacao": "A pecuária extensiva e o ecoturismo são as principais atividades econômicas sustentáveis do Pantanal!"
+    "explicacao": "A pecuária extensiva e o ecoturismo são as principais atividades econômicas do Pantanal!"
+  },
+  {
+    "id": "b11",
+    "dificuldade": "dificil",
+    "categoria": "bioma",
+    "enunciado": "O que são as 'baías' no contexto do Pantanal?",
+    "opcoes": [
+      "Pequenos portos fluviais para barcos de pesca",
+      "Depressões do terreno que se enchem de água nas cheias, virando lagoas",
+      "Mares internos ligados ao Rio Paraguai",
+      "Ilhas flutuantes de vegetação aquática"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "As baías são habitats essenciais: na seca ficam ressecadas, na cheia viram lagoas repletas de peixes, aves e jacarés!"
+  },
+  {
+    "id": "b12",
+    "dificuldade": "dificil",
+    "categoria": "bioma",
+    "enunciado": "Quantas espécies de aves já foram registradas no Pantanal?",
+    "opcoes": ["Cerca de 150", "Cerca de 350", "Mais de 650", "Mais de 2.000"],
+    "resposta_correta": 2,
+    "explicacao": "Com mais de 650 espécies de aves, o Pantanal é um dos melhores destinos de observação de pássaros do mundo!"
+  },
+  {
+    "id": "b13",
+    "dificuldade": "dificil",
+    "categoria": "bioma",
+    "enunciado": "Aproximadamente em quais meses ocorre a maior cheia do Pantanal?",
+    "opcoes": [
+      "Junho a setembro (inverno seco)",
+      "Outubro a novembro (início das chuvas)",
+      "Dezembro a março (verão chuvoso)",
+      "O Pantanal alaga apenas em anos de La Niña"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A cheia do Pantanal ocorre de dezembro a março. As chuvas do Mato Grosso chegam ao Rio Paraguai semanas depois!"
+  },
+  {
+    "id": "b14",
+    "dificuldade": "facil",
+    "categoria": "bioma",
+    "enunciado": "Quantos biomas existem no Brasil?",
+    "opcoes": ["2 biomas", "4 biomas", "6 biomas", "10 biomas"],
+    "resposta_correta": 2,
+    "explicacao": "O Brasil tem 6 biomas: Amazônia, Cerrado, Pantanal, Caatinga, Mata Atlântica e Pampa!"
+  },
+  {
+    "id": "b15",
+    "dificuldade": "medio",
+    "categoria": "bioma",
+    "enunciado": "O que acontece com os animais do Pantanal durante as grandes cheias?",
+    "opcoes": [
+      "Todos os animais morrem afogados",
+      "Se concentram nas partes mais altas do terreno (chamadas 'cordilheiras')",
+      "Hibernam debaixo da lama por meses",
+      "Migram em massa para a Amazônia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Nas cheias, onças, antas e capivaras sobem para as 'cordilheiras' (terras altas), criando espetáculos únicos de fauna concentrada!"
   },
   {
     "id": "s01",
+    "dificuldade": "facil",
     "categoria": "sustentabilidade",
-    "enunciado": "O que significa \"desenvolvimento sustentável\"?",
+    "enunciado": "O que significa 'desenvolvimento sustentável'?",
     "opcoes": [
       "Construir prédios muito altos",
       "Usar os recursos naturais sem pensar no futuro",
-      "Atender às necessidades de hoje sem comprometer o futuro",
+      "Atender às necessidades de hoje sem comprometer as gerações futuras",
       "Desenvolver apenas países ricos"
     ],
     "resposta_correta": 2,
-    "explicacao": "Sustentabilidade é usar os recursos naturais com sabedoria para que as próximas gerações também possam usufruir!"
+    "explicacao": "Sustentabilidade é usar os recursos com sabedoria para que as próximas gerações também possam usufruir!"
   },
   {
     "id": "s02",
+    "dificuldade": "facil",
     "categoria": "sustentabilidade",
     "enunciado": "Qual destas ações NÃO ajuda a preservar o meio ambiente?",
     "opcoes": [
@@ -227,6 +355,7 @@
   },
   {
     "id": "s03",
+    "dificuldade": "facil",
     "categoria": "sustentabilidade",
     "enunciado": "O que são energias renováveis?",
     "opcoes": [
@@ -240,19 +369,21 @@
   },
   {
     "id": "s04",
+    "dificuldade": "facil",
     "categoria": "sustentabilidade",
-    "enunciado": "O que significa o \"3R\" da sustentabilidade?",
+    "enunciado": "O que significa o 'R' de 'Reduzir' nos 3Rs da sustentabilidade?",
     "opcoes": [
-      "Reclamar, Recusar, Roubar",
-      "Reduzir, Reutilizar, Reciclar",
-      "Reconstruir, Restaurar, Renovar",
-      "Reparar, Reformar, Revender"
+      "Reclamar sobre o lixo nas ruas",
+      "Consumir menos — comprar só o que realmente precisa",
+      "Reformar produtos velhos para vender",
+      "Recuperar energia de lixo eletrônico"
     ],
     "resposta_correta": 1,
-    "explicacao": "Os 3Rs — Reduzir o consumo, Reutilizar produtos e Reciclar materiais — são a base do consumo consciente!"
+    "explicacao": "Os 3Rs são: Reduzir o consumo, Reutilizar produtos e Reciclar materiais — nessa ordem de prioridade!"
   },
   {
     "id": "s05",
+    "dificuldade": "facil",
     "categoria": "sustentabilidade",
     "enunciado": "Por que plantar árvores ajuda o meio ambiente?",
     "opcoes": [
@@ -266,6 +397,7 @@
   },
   {
     "id": "s06",
+    "dificuldade": "dificil",
     "categoria": "sustentabilidade",
     "enunciado": "O que é a pegada hídrica de um produto?",
     "opcoes": [
@@ -278,7 +410,92 @@
     "explicacao": "Produzir 1 kg de carne bovina consome cerca de 15.400 litros de água — a pegada hídrica é enorme!"
   },
   {
+    "id": "s07",
+    "dificuldade": "dificil",
+    "categoria": "sustentabilidade",
+    "enunciado": "O que é 'greenwashing'?",
+    "opcoes": [
+      "Um método para limpar rios poluídos com plantas aquáticas",
+      "Quando empresas usam marketing ecológico falso para parecer sustentáveis",
+      "Uma técnica de pintura com tinta biodegradável",
+      "O processo de transformar lixo verde em energia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Greenwashing engana consumidores! Procure certificações reais (como FSC ou Ecocert) em vez de selos genéricos."
+  },
+  {
+    "id": "s08",
+    "dificuldade": "dificil",
+    "categoria": "sustentabilidade",
+    "enunciado": "Qual gás, liberado pela queima de combustíveis fósseis, é o principal responsável pelo aquecimento global?",
+    "opcoes": [
+      "Oxigênio (O₂)",
+      "Nitrogênio (N₂)",
+      "Dióxido de carbono (CO₂)",
+      "Hidrogênio (H₂)"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O CO₂ vem de carros, indústrias e desmatamento. Em 2023, sua concentração atingiu o nível mais alto dos últimos 800.000 anos!"
+  },
+  {
+    "id": "s09",
+    "dificuldade": "dificil",
+    "categoria": "sustentabilidade",
+    "enunciado": "O que significa 'biodiversidade'?",
+    "opcoes": [
+      "A diversidade de produtos orgânicos em supermercados",
+      "Apenas a quantidade de animais em um parque",
+      "A variedade de formas de vida — plantas, animais, fungos e micróbios — num ecossistema",
+      "O número de espécies já extintas registradas na ciência"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Quanto maior a biodiversidade, mais resiliente é o ecossistema. O Pantanal é um dos mais biodiversos do planeta!"
+  },
+  {
+    "id": "s10",
+    "dificuldade": "facil",
+    "categoria": "sustentabilidade",
+    "enunciado": "Qual dessas atitudes ajuda a economizar energia elétrica em casa?",
+    "opcoes": [
+      "Deixar a televisão ligada para a casa não ficar quieta",
+      "Trocar lâmpadas comuns por LEDs e desligar aparelhos em standby",
+      "Lavar roupas sempre com água quente",
+      "Manter o freezer sempre cheio de gelo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Lâmpadas LED consomem até 80% menos energia e duram até 25 vezes mais que as incandescentes!"
+  },
+  {
+    "id": "s11",
+    "dificuldade": "medio",
+    "categoria": "sustentabilidade",
+    "enunciado": "O que é a 'pegada de carbono' de uma pessoa?",
+    "opcoes": [
+      "O rastro deixado por carros no asfalto molhado",
+      "A quantidade de CO₂ e gases estufa que suas atividades geram",
+      "O quanto de carvão uma família usa no churrasco",
+      "A pegada fóssil encontrada em camadas de carvão mineral"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Transporte, alimentação, energia elétrica — tudo gera pegada de carbono. Conhecê-la é o primeiro passo para reduzi-la!"
+  },
+  {
+    "id": "s12",
+    "dificuldade": "medio",
+    "categoria": "sustentabilidade",
+    "enunciado": "Por que a carne bovina tem grande impacto ambiental?",
+    "opcoes": [
+      "Porque as vacas fazem muito barulho nas fazendas",
+      "Porque a pecuária consome muita água, terra e emite metano (um gás estufa poderoso)",
+      "Porque a carne bovina não tem nutrientes úteis",
+      "Porque os bois derrubam árvores com os chifres"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Produzir 1 kg de carne bovina usa ~15.000 L de água e as vacas emitem metano, 28x mais potente que o CO₂!"
+  },
+  {
     "id": "c01",
+    "dificuldade": "medio",
     "categoria": "coleta_seletiva",
     "enunciado": "Qual é a cor da lixeira destinada ao papel e papelão?",
     "opcoes": ["Vermelha", "Azul", "Verde", "Amarela"],
@@ -287,6 +504,7 @@
   },
   {
     "id": "c02",
+    "dificuldade": "medio",
     "categoria": "coleta_seletiva",
     "enunciado": "Qual é a cor da lixeira para plástico?",
     "opcoes": ["Azul", "Verde", "Vermelha", "Amarela"],
@@ -295,6 +513,7 @@
   },
   {
     "id": "c03",
+    "dificuldade": "medio",
     "categoria": "coleta_seletiva",
     "enunciado": "Qual é a cor da lixeira para vidro?",
     "opcoes": ["Amarela", "Azul", "Verde", "Marrom"],
@@ -303,6 +522,7 @@
   },
   {
     "id": "c04",
+    "dificuldade": "medio",
     "categoria": "coleta_seletiva",
     "enunciado": "Qual é a cor da lixeira para metais (latas, alumínio)?",
     "opcoes": ["Verde", "Azul", "Vermelha", "Amarela"],
@@ -311,11 +531,12 @@
   },
   {
     "id": "c05",
+    "dificuldade": "medio",
     "categoria": "coleta_seletiva",
     "enunciado": "Papel sujo de gordura (como papel de pizza) pode ser reciclado?",
     "opcoes": [
       "Sim, vai direto na lixeira azul",
-      "Não, a gordura contamina e ele vai no lixo orgânico",
+      "Não, a gordura contamina e ele vai no lixo orgânico ou comum",
       "Sim, mas precisa ser lavado primeiro",
       "Somente se for papel branco"
     ],
@@ -324,6 +545,7 @@
   },
   {
     "id": "c06",
+    "dificuldade": "medio",
     "categoria": "coleta_seletiva",
     "enunciado": "Qual é a cor da lixeira para resíduos orgânicos (restos de comida)?",
     "opcoes": ["Cinza", "Marrom", "Laranja", "Roxo"],
@@ -332,6 +554,7 @@
   },
   {
     "id": "c07",
+    "dificuldade": "medio",
     "categoria": "coleta_seletiva",
     "enunciado": "Pilhas e baterias devem ser descartadas em qual local?",
     "opcoes": [
@@ -345,10 +568,62 @@
   },
   {
     "id": "c08",
+    "dificuldade": "dificil",
     "categoria": "coleta_seletiva",
     "enunciado": "Quanto tempo uma garrafa de plástico PET leva para se decompor na natureza?",
     "opcoes": ["1 ano", "10 anos", "100 anos", "Mais de 400 anos"],
     "resposta_correta": 3,
     "explicacao": "Uma garrafa PET demora mais de 400 anos para se decompor — por isso reciclar é tão importante!"
+  },
+  {
+    "id": "c09",
+    "dificuldade": "dificil",
+    "categoria": "coleta_seletiva",
+    "enunciado": "O que é compostagem?",
+    "opcoes": [
+      "Um processo industrial de compactar embalagens plásticas",
+      "A transformação de resíduos orgânicos (cascas, restos de comida) em adubo natural",
+      "Um método para reciclar vidro em alta temperatura",
+      "O tratamento químico de pilhas e baterias usadas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Com uma composteira em casa você transforma cascas de frutas e restos de comida em adubo rico para plantas!"
+  },
+  {
+    "id": "c10",
+    "dificuldade": "dificil",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Quantas vezes uma lata de alumínio pode ser reciclada sem perder qualidade?",
+    "opcoes": ["No máximo 3 vezes", "Até 10 vezes", "Apenas uma vez", "Infinitamente"],
+    "resposta_correta": 3,
+    "explicacao": "O alumínio é 100% reciclável infinitamente! Reciclar uma lata economiza energia para uma TV ligada por 3 horas!"
+  },
+  {
+    "id": "c11",
+    "dificuldade": "facil",
+    "categoria": "coleta_seletiva",
+    "enunciado": "O que significa o símbolo das três setas formando um triângulo em embalagens?",
+    "opcoes": [
+      "Que o produto veio de três países diferentes",
+      "Que o produto pode ser reciclado",
+      "Que o produto é frágil e deve ser manuseado com cuidado",
+      "Que o produto tem três componentes"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O símbolo das três setas indica que o material é reciclável — mas nem sempre há coleta disponível em todas as cidades!"
+  },
+  {
+    "id": "c12",
+    "dificuldade": "facil",
+    "categoria": "coleta_seletiva",
+    "enunciado": "Onde devemos jogar um copo plástico descartável usado?",
+    "opcoes": [
+      "Na lixeira marrom (orgânico)",
+      "Na lixeira vermelha (plástico)",
+      "No vaso sanitário",
+      "Na lixeira azul (papel)"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Plásticos vão na lixeira VERMELHA! Mas se estiver sujo, lave antes — resíduos orgânicos contaminam a reciclagem."
   }
 ]
