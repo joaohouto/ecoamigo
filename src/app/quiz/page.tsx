@@ -3,10 +3,15 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import todasPerguntas from '@/data/perguntas.json'
 import { useGameStore } from '@/store/gameStore'
 import { useGamepad } from '@/hooks/useGamepad'
 import type { Pergunta } from '@/types'
+import { tocarUI } from '@/lib/uiSounds'
+import GamepadHint from '@/components/GamepadHint'
+import DialogSair from '@/components/DialogSair'
+import { FEmoji } from '@/components/FEmoji'
 
 const TOTAL_PERGUNTAS = 15
 const TEMPO_MAX = 20
@@ -54,11 +59,11 @@ function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
         animate={{ opacity: 1, y: 0 }}
       >
         <motion.span
-          className="text-8xl block mb-4"
+          className="block mb-4"
           animate={{ rotate: [0, -8, 8, -4, 4, 0] }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          🌿
+          <FEmoji size={96}>🌿</FEmoji>
         </motion.span>
         <h1
           className="text-5xl md:text-6xl text-azul-reciclagem mb-3"
@@ -90,11 +95,11 @@ function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
           className="space-y-2 text-marrom-terra text-base"
           style={{ fontFamily: 'var(--font-nunito)' }}
         >
-          <li>🌿 {TOTAL_PERGUNTAS} perguntas aleatórias por rodada</li>
-          <li>⏱️ {TEMPO_MAX} segundos por pergunta</li>
-          <li>✅ +{PONTOS_ACERTO} pts por resposta correta</li>
-          <li>⚡ Resposta em menos de 5s = bônus de +{BONUS_RAPIDO} pts!</li>
-          <li>🗂️ Temas: animais, bioma, sustentabilidade e reciclagem</li>
+          <li className="flex items-center gap-2"><FEmoji size={20}>🌿</FEmoji> {TOTAL_PERGUNTAS} perguntas aleatórias por rodada</li>
+          <li className="flex items-center gap-2"><FEmoji size={20}>⏱️</FEmoji> {TEMPO_MAX} segundos por pergunta</li>
+          <li className="flex items-center gap-2"><FEmoji size={20}>✅</FEmoji> +{PONTOS_ACERTO} pts por resposta correta</li>
+          <li className="flex items-center gap-2"><FEmoji size={20}>⚡</FEmoji> Resposta em menos de 5s = bônus de +{BONUS_RAPIDO} pts!</li>
+          <li className="flex items-center gap-2"><FEmoji size={20}>🗂️</FEmoji> Temas: animais, bioma, sustentabilidade e reciclagem</li>
         </ul>
       </motion.div>
 
@@ -108,7 +113,7 @@ function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        Começar! 🌿
+        Começar! <FEmoji size={22}>🌿</FEmoji>
       </motion.button>
 
       <Link
@@ -155,7 +160,7 @@ function TelaFinal({
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: 'spring', stiffness: 200, damping: 15 }}
       >
-        <span className="text-8xl block mb-3">{emoji}</span>
+        <FEmoji size={88} className="block mb-3">{emoji}</FEmoji>
         <h1
           className="text-5xl text-azul-reciclagem mb-2"
           style={{ fontFamily: 'var(--font-fredoka)' }}
@@ -275,6 +280,8 @@ function TimerBar({ tempo, maximo }: { tempo: number; maximo: number }) {
 export default function QuizPage() {
   const { estado, iniciarJogo, finalizarJogo, adicionarPontos, pontuacao } =
     useGameStore()
+  const router = useRouter()
+  const [mostrarDialogSair, setMostrarDialogSair] = useState(false)
 
   const [rodada, setRodada] = useState<Pergunta[]>([])
   const [indice, setIndice] = useState(0)
@@ -296,6 +303,20 @@ export default function QuizPage() {
       timerRef.current = null
     }
   }, [])
+
+  // Retoma o countdown a partir do tempo atual (sem resetar para TEMPO_MAX)
+  const retomarTimer = useCallback(() => {
+    if (timerRef.current) return
+    timerRef.current = setInterval(() => {
+      setTempo((t) => (t <= 1 ? 0 : t - 1))
+    }, 1000)
+  }, [])
+
+  const confirmarSair = useCallback(() => {
+    pararTimer()
+    useGameStore.getState().resetar()
+    router.push('/')
+  }, [pararTimer, router])
 
   const iniciarTimer = useCallback(() => {
     pararTimer()
@@ -320,6 +341,7 @@ export default function QuizPage() {
   }, [tempo, fase, pararTimer])
 
   const avancar = useCallback(() => {
+    tocarUI('navegar')
     const proximo = indice + 1
     if (proximo >= TOTAL_PERGUNTAS) {
       finalizarJogo()
@@ -333,25 +355,48 @@ export default function QuizPage() {
   }, [indice, finalizarJogo, iniciarTimer])
 
   // Cleanup ao desmontar
-  useEffect(() => () => pararTimer(), [pararTimer])
+  useEffect(() => {
+    return () => {
+      pararTimer()
+      // Limpa estado de jogo em andamento ao sair da página (ex: usuário volta ao menu)
+      if (useGameStore.getState().estado === 'jogando') {
+        useGameStore.getState().resetar()
+      }
+    }
+  }, [pararTimer])
 
   // Resetar foco a cada nova pergunta
   useEffect(() => { setFoco(0) }, [indice])
 
+  // Som de tick nos últimos 5 segundos
+  useEffect(() => {
+    if (tempo > 0 && tempo <= 5 && fase === 'respondendo') {
+      tocarUI('tick')
+    }
+  }, [tempo, fase])
+
   // Gamepad
   useGamepad({
-    onCima:      () => { if (fase === 'respondendo') setFoco((f) => (f - 1 + 4) % 4) },
-    onBaixo:     () => { if (fase === 'respondendo') setFoco((f) => (f + 1) % 4) },
-    onEsquerda:  () => { if (fase === 'respondendo') setFoco((f) => (f - 1 + 4) % 4) },
-    onDireita:   () => { if (fase === 'respondendo') setFoco((f) => (f + 1) % 4) },
+    onCima:      () => { if (!mostrarDialogSair && fase === 'respondendo') { setFoco((f) => (f - 1 + 4) % 4); tocarUI('navegar') } },
+    onBaixo:     () => { if (!mostrarDialogSair && fase === 'respondendo') { setFoco((f) => (f + 1) % 4); tocarUI('navegar') } },
+    onEsquerda:  () => { if (!mostrarDialogSair && fase === 'respondendo') { setFoco((f) => (f - 1 + 4) % 4); tocarUI('navegar') } },
+    onDireita:   () => { if (!mostrarDialogSair && fase === 'respondendo') { setFoco((f) => (f + 1) % 4); tocarUI('navegar') } },
     onConfirmar: () => {
+      if (mostrarDialogSair) { confirmarSair(); return }
       if (estado === 'idle' || estado === 'finalizado') { iniciar(); return }
       if (fase === 'respondendo') responder(foco)
       else if (fase === 'feedback') avancar()
     },
+    onVoltar: () => {
+      if (mostrarDialogSair) { setMostrarDialogSair(false); retomarTimer(); return }
+      if (estado === 'idle' || estado === 'finalizado') { router.push('/'); return }
+      if (estado === 'jogando' && fase === 'respondendo') { pararTimer(); setMostrarDialogSair(true) }
+      else if (estado === 'jogando') setMostrarDialogSair(true)
+    },
   })
 
   const iniciar = useCallback(() => {
+    tocarUI('iniciar')
     pararTimer()
     iniciarJogo('quiz')
     const sorteadas = embaralhar(todasPerguntas as Pergunta[]).slice(0, TOTAL_PERGUNTAS)
@@ -374,6 +419,8 @@ export default function QuizPage() {
   const responder = (opcaoIdx: number) => {
     if (fase !== 'respondendo' || !perguntaAtual) return
 
+    tocarUI('selecionar')
+
     pararTimer()
     const elapsed = (Date.now() - tempoInicio) / 1000
     const correto = opcaoIdx === perguntaAtual.resposta_correta
@@ -383,11 +430,14 @@ export default function QuizPage() {
     setFase('feedback')
 
     if (correto) {
+      tocarUI('acertar')
       let pts = PONTOS_ACERTO
       if (elapsed < 5) pts += BONUS_RAPIDO
       else if (elapsed < 10) pts += BONUS_MEDIO
       adicionarPontos(pts)
       setAcertos((a) => a + 1)
+    } else {
+      tocarUI('errar')
     }
   }
 
@@ -395,11 +445,25 @@ export default function QuizPage() {
   // Renders condicionais
   // ---------------------------------------------------------------------------
 
-  if (estado === 'idle') return <TelaInicio onIniciar={iniciar} />
+  if (estado === 'idle') return (
+    <>
+      <TelaInicio onIniciar={iniciar} />
+      <GamepadHint hints={[
+        { botao: 'confirmar', label: 'Começar' },
+        { botao: 'voltar', label: 'Menu' },
+      ]} />
+    </>
+  )
 
-  if (estado === 'finalizado') {
-    return <TelaFinal pontuacao={pontuacao} acertos={acertos} onReiniciar={iniciar} />
-  }
+  if (estado === 'finalizado') return (
+    <>
+      <TelaFinal pontuacao={pontuacao} acertos={acertos} onReiniciar={iniciar} />
+      <GamepadHint hints={[
+        { botao: 'confirmar', label: 'Jogar de novo' },
+        { botao: 'voltar', label: 'Menu' },
+      ]} />
+    </>
+  )
 
   if (!perguntaAtual) return null
 
@@ -408,6 +472,9 @@ export default function QuizPage() {
   // ---------------------------------------------------------------------------
 
   const respostaCorreta = perguntaAtual.resposta_correta
+  const hintsJogo = fase === 'feedback'
+    ? [{ botao: 'confirmar' as const, label: 'Próxima' }]
+    : [{ botao: 'dpad' as const, label: 'Navegar' }, { botao: 'confirmar' as const, label: 'Responder' }]
 
   return (
     <main className="min-h-screen bg-fundo flex flex-col items-center justify-center gap-5 px-4 py-8">
@@ -470,7 +537,7 @@ export default function QuizPage() {
         >
           {/* Categoria */}
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-xl">{EMOJI_CATEGORIA[perguntaAtual.categoria] ?? '❓'}</span>
+            <FEmoji size={24}>{EMOJI_CATEGORIA[perguntaAtual.categoria] ?? '❓'}</FEmoji>
             <span
               className="text-sm font-bold text-azul-reciclagem uppercase tracking-wide"
               style={{ fontFamily: 'var(--font-nunito)' }}
@@ -566,6 +633,15 @@ export default function QuizPage() {
           )
         })}
       </div>
+
+      <GamepadHint hints={[...hintsJogo, { botao: 'voltar', label: 'Sair' }]} />
+
+      {mostrarDialogSair && (
+        <DialogSair
+          onConfirmar={confirmarSair}
+          onCancelar={() => { setMostrarDialogSair(false); retomarTimer() }}
+        />
+      )}
 
       {/* Feedback / explicação + botão de avanço */}
       <AnimatePresence>

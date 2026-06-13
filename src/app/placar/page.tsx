@@ -3,20 +3,27 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useGameStore } from '@/store/gameStore'
 import { usePlacar } from '@/hooks/usePlacar'
+import { useGamepad } from '@/hooks/useGamepad'
 import type { EntradaPlacarLocal, EntradaPlacar, Jogo } from '@/types'
+import GamepadHint from '@/components/GamepadHint'
+import { FEmoji } from '@/components/FEmoji'
 
 const TOP_N = 10
 const POLL_INTERVAL_MS = 30_000
 
-const NOME_JOGO: Record<Jogo, string> = { sons: '🎵 Sons', quiz: '🌿 Quiz' }
+const NOME_JOGO: Record<Jogo, { emoji: string; label: string }> = {
+  sons: { emoji: '🎵', label: 'Sons' },
+  quiz: { emoji: '🌿', label: 'Quiz' },
+}
 
-function medalha(pos: number): string {
-  if (pos === 1) return '🥇'
-  if (pos === 2) return '🥈'
-  if (pos === 3) return '🥉'
-  return `${pos}º`
+function Medalha({ pos }: { pos: number }) {
+  if (pos === 1) return <FEmoji size={22}>🥇</FEmoji>
+  if (pos === 2) return <FEmoji size={22}>🥈</FEmoji>
+  if (pos === 3) return <FEmoji size={22}>🥉</FEmoji>
+  return <>{pos}º</>
 }
 
 function formatarData(ts: string | Date): string {
@@ -33,7 +40,7 @@ function IndicadorConexao({ online }: { online: boolean }) {
       className={`flex items-center gap-1 text-xs font-bold ${online ? 'text-verde-acento' : 'text-gray-400'}`}
       style={{ fontFamily: 'var(--font-nunito)' }}
     >
-      <span>{online ? '☁️' : '📴'}</span>
+      <FEmoji size={16}>{online ? '☁️' : '📴'}</FEmoji>
       <span>{online ? 'Online' : 'Offline'}</span>
     </div>
   )
@@ -71,7 +78,7 @@ function TabelaPlacar({
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col flex-1 min-w-0">
       <div className={`px-5 py-3 flex items-center gap-2 ${corHeader}`}>
-        <span className="text-xl">{icone}</span>
+        <FEmoji size={22}>{icone}</FEmoji>
         <h2
           className="text-white text-xl font-bold"
           style={{ fontFamily: 'var(--font-fredoka)' }}
@@ -85,19 +92,19 @@ function TabelaPlacar({
           <motion.span
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 1.2, ease: 'linear' }}
-            className="text-3xl"
+            className="block"
           >
-            ⏳
+            <FEmoji size={40}>⏳</FEmoji>
           </motion.span>
         </div>
       ) : offline ? (
         <div className="flex flex-col items-center justify-center py-14 text-gray-400 gap-2">
-          <span className="text-4xl">📴</span>
+          <FEmoji size={48}>📴</FEmoji>
           <p style={{ fontFamily: 'var(--font-nunito)' }}>Sem conexão</p>
         </div>
       ) : top.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-14 text-gray-400 gap-2">
-          <span className="text-4xl">🌱</span>
+          <FEmoji size={48}>🌱</FEmoji>
           <p style={{ fontFamily: 'var(--font-nunito)' }}>Nenhuma entrada ainda</p>
         </div>
       ) : (
@@ -116,7 +123,7 @@ function TabelaPlacar({
                 className="text-base min-w-[2.5rem] font-bold text-marrom-terra"
                 style={{ fontFamily: 'var(--font-fredoka)' }}
               >
-                {medalha(i + 1)}
+                <Medalha pos={i + 1} />
               </span>
 
               <span
@@ -131,8 +138,9 @@ function TabelaPlacar({
                 )}
               </span>
 
-              <span className="text-xs text-gray-400 hidden sm:block flex-shrink-0">
-                {NOME_JOGO[entrada.jogo]}
+              <span className="text-xs text-gray-400 hidden sm:flex flex-shrink-0 items-center gap-1">
+                <FEmoji size={14}>{NOME_JOGO[entrada.jogo].emoji}</FEmoji>
+                {NOME_JOGO[entrada.jogo].label}
               </span>
 
               <span className="text-xs text-gray-300 hidden md:block flex-shrink-0">
@@ -212,7 +220,7 @@ function FormRegistro({
             className="text-white/80 text-sm"
             style={{ fontFamily: 'var(--font-nunito)' }}
           >
-            {NOME_JOGO[jogo]} — sua pontuação
+            <FEmoji size={16}>{NOME_JOGO[jogo].emoji}</FEmoji> {NOME_JOGO[jogo].label} — sua pontuação
           </p>
           <p
             className="text-white text-5xl font-bold leading-none"
@@ -221,7 +229,7 @@ function FormRegistro({
             {pontuacao} <span className="text-2xl font-normal opacity-80">pts</span>
           </p>
         </div>
-        <span className="text-6xl">🏆</span>
+        <FEmoji size={72}>🏆</FEmoji>
       </div>
 
       {/* Form */}
@@ -256,7 +264,9 @@ function FormRegistro({
             className="px-6 py-3 bg-verde-primario text-white rounded-xl text-lg font-bold hover:bg-verde-acento transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             style={{ fontFamily: 'var(--font-fredoka)' }}
           >
-            {enviando ? '...' : online ? '🌐 Enviar' : '💾 Salvar'}
+            {enviando ? '...' : online
+              ? <><FEmoji size={16}>🌐</FEmoji> Enviar</>
+              : <><FEmoji size={16}>💾</FEmoji> Salvar</>}
           </motion.button>
         </div>
 
@@ -279,7 +289,7 @@ function FormRegistro({
             className="text-gray-400 text-xs mt-2"
             style={{ fontFamily: 'var(--font-nunito)' }}
           >
-            📴 Sem conexão — será salvo apenas localmente
+            <FEmoji size={14}>📴</FEmoji> Sem conexão — será salvo apenas localmente
           </p>
         )}
 
@@ -304,11 +314,17 @@ export default function PlacarPage() {
   const { estado, jogoAtual, pontuacao, nomeJogador, resetar, setNome } = useGameStore()
   const { placarLocal, placarGlobal, carregandoGlobal, online, salvar, buscarGlobal } =
     usePlacar()
+  const router = useRouter()
 
   const temScore = estado === 'finalizado' && jogoAtual !== null
   const [mostrarForm, setMostrarForm] = useState(temScore)
   const [nomeRegistrado, setNomeRegistrado] = useState('')
   const [aba, setAba] = useState<'local' | 'global'>('local')
+
+  // Gamepad: B volta ao menu (só quando não há form de registro aberto)
+  useGamepad({
+    onVoltar: () => { if (!mostrarForm) router.push('/') },
+  })
 
   // Fetch global imediato + polling a cada 30s
   useEffect(() => {
@@ -386,7 +402,7 @@ export default function PlacarPage() {
             className="text-4xl md:text-5xl text-marrom-terra"
             style={{ fontFamily: 'var(--font-fredoka)' }}
           >
-            🏆 Placar
+            <FEmoji size={44}>🏆</FEmoji> Placar
           </h1>
           <p
             className="text-marrom-terra/60 text-sm mt-0.5"
@@ -434,7 +450,9 @@ export default function PlacarPage() {
               }`}
               style={{ fontFamily: 'var(--font-fredoka)' }}
             >
-              {t === 'local' ? '🏠 Local' : '🌐 Global'}
+              {t === 'local'
+              ? <><FEmoji size={16}>🏠</FEmoji> Local</>
+              : <><FEmoji size={16}>🌐</FEmoji> Global</>}
             </button>
           ))}
         </div>
@@ -463,6 +481,8 @@ export default function PlacarPage() {
         </div>
       </div>
 
+      <GamepadHint hints={[{ botao: 'voltar', label: 'Voltar ao menu' }]} />
+
       {/* Navegação para os jogos */}
       <div className="flex gap-3 flex-wrap justify-center mt-2">
         <Link
@@ -470,14 +490,14 @@ export default function PlacarPage() {
           className="px-7 py-3 bg-verde-primario text-white rounded-full text-lg font-bold hover:bg-verde-acento transition-colors shadow"
           style={{ fontFamily: 'var(--font-fredoka)' }}
         >
-          🎵 Sons do Pantanal
+          <FEmoji size={20}>🎵</FEmoji> Sons do Pantanal
         </Link>
         <Link
           href="/quiz"
           className="px-7 py-3 bg-azul-reciclagem text-white rounded-full text-lg font-bold hover:opacity-90 transition-opacity shadow"
           style={{ fontFamily: 'var(--font-fredoka)' }}
         >
-          🌿 Quiz Pantanal
+          <FEmoji size={20}>🌿</FEmoji> Quiz Pantanal
         </Link>
       </div>
     </main>
