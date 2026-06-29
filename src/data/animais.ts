@@ -72,13 +72,6 @@ export const ANIMAIS: Animal[] = [
     somUrl: "/sounds/bemtevi.mp3",
   },
   {
-    id: "cervo",
-    nome: "cervo",
-    nomeExibicao: "Cervo-do-Pantanal",
-    imagemUrl: "/animals/cervo.jpg",
-    somUrl: "/sounds/cervo.mp3",
-  },
-  {
     id: "tamandua",
     nome: "tamandua",
     nomeExibicao: "Tamanduá-Bandeira",
@@ -91,5 +84,19 @@ export const ANIMAIS: Animal[] = [
     nomeExibicao: "Papagaio-Verdadeiro",
     imagemUrl: "/animals/papagaio.jpg",
     somUrl: "/sounds/papagaio.mp3",
+  },
+  {
+    id: "bugio",
+    nome: "bugio",
+    nomeExibicao: "Bugio",
+    imagemUrl: "/animals/bugio.jpg",
+    somUrl: "/sounds/bugio.mp3",
+  },
+  {
+    id: "ariranha",
+    nome: "ariranha",
+    nomeExibicao: "Ariranha",
+    imagemUrl: "/animals/ariranha.jpg",
+    somUrl: "/sounds/ariranha.mp3",
   },
 ];

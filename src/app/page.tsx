@@ -8,6 +8,7 @@ import { useGamepadStatus } from "@/hooks/useGamepadStatus";
 import { tocarUI } from "@/lib/uiSounds";
 import GamepadHint from "@/components/GamepadHint";
 import { FEmoji } from "@/components/FEmoji";
+import Image from "next/image";
 
 interface ItemMenu {
   href: string;
@@ -95,18 +96,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1
-            className="text-5xl md:text-7xl lg:text-8xl text-verde-primario mb-3 leading-tight"
-            style={{ fontFamily: "var(--font-fredoka)" }}
-          >
-            <FEmoji size={56}>🌱</FEmoji> ECO AMIGO
-          </h1>
-          <p
-            className="text-xl md:text-2xl text-marrom-terra font-semibold"
-            style={{ fontFamily: "var(--font-nunito)" }}
-          >
-            Juntos por um mundo mais verde!
-          </p>
+          <Image src="/icon.png" alt="DIREITO" width={300} height={300} />
         </motion.div>
 
         {/* Cards do menu */}
