@@ -283,7 +283,7 @@ function FormRegistro({
         ) : (
           /* Input convencional (teclado/mouse) */
           <form onSubmit={handleSubmit}>
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="text"
                 value={nome}
@@ -295,7 +295,7 @@ function FormRegistro({
                 maxLength={20}
                 autoFocus
                 className={`
-                  flex-1 px-4 py-3 rounded-xl border-2 text-lg text-gray-800 outline-none
+                  min-w-0 flex-1 px-4 py-3 rounded-xl border-2 text-lg text-gray-800 outline-none
                   transition-colors placeholder-gray-300
                   ${erro ? "border-red-400 focus:border-red-500" : "border-gray-200 focus:border-verde-primario"}
                 `}
@@ -306,7 +306,7 @@ function FormRegistro({
                 disabled={enviando || nome.trim().length < 2}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="px-6 py-3 bg-verde-primario text-white rounded-xl text-lg font-bold hover:bg-verde-acento transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="shrink-0 w-full sm:w-auto inline-flex items-center justify-center gap-1.5 whitespace-nowrap px-6 py-3 bg-verde-primario text-white rounded-xl text-lg font-bold hover:bg-verde-acento transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                 style={{ fontFamily: "var(--font-fredoka)" }}
               >
                 {enviando ? (

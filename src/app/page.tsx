@@ -96,7 +96,13 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <Image src="/icon.png" alt="DIREITO" width={300} height={300} />
+          <Image
+            src="/icon.png"
+            alt="DIREITO"
+            width={300}
+            height={300}
+            className="w-32 h-32 sm:w-44 sm:h-44 md:w-[300px] md:h-[300px]"
+          />
         </motion.div>
 
         {/* Cards do menu */}
