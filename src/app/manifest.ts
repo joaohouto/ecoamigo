@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Juntos por um mundo mais verde!",
     start_url: "/",
     display: "fullscreen",
-    orientation: "landscape",
+    orientation: "any",
     background_color: "#F5F5E8",
     theme_color: "#2D7D2D",
     icons: [
