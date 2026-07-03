@@ -1,4 +1,4 @@
-export type Jogo = 'sons' | 'quiz'
+export type Jogo = 'sons' | 'quiz' | 'direito'
 
 export type CategoriaQuiz =
   | 'animais'
@@ -6,12 +6,28 @@ export type CategoriaQuiz =
   | 'sustentabilidade'
   | 'coleta_seletiva'
 
+export type CategoriaDireito =
+  | 'constitucional'
+  | 'civil'
+  | 'penal'
+  | 'trabalhista'
+
 export type DificuldadePergunta = 'facil' | 'medio' | 'dificil'
 
 export interface Pergunta {
   id: string
   dificuldade: DificuldadePergunta
   categoria: CategoriaQuiz
+  enunciado: string
+  opcoes: string[]         // sempre 4 opções
+  resposta_correta: number // índice (0–3)
+  explicacao?: string
+}
+
+export interface PerguntaDireito {
+  id: string
+  dificuldade: DificuldadePergunta
+  categoria: CategoriaDireito
   enunciado: string
   opcoes: string[]         // sempre 4 opções
   resposta_correta: number // índice (0–3)

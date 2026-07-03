@@ -5,8 +5,9 @@ import { verificarProfanidade } from '@/lib/profanityList'
 import type { Jogo } from '@/types'
 
 const SCORE_MAXIMO: Record<Jogo, number> = {
-  sons: 6 * (100 + 50),   // 900
-  quiz: 10 * (100 + 50),  // 1500
+  sons: 6 * (100 + 50),     // 900
+  quiz: 10 * (100 + 50),    // 1500
+  direito: 10 * (100 + 50), // 1500
 }
 
 function getIP(req: NextRequest): string {
@@ -78,7 +79,7 @@ export async function POST(req: NextRequest) {
   }
 
   // 5. Validação do jogo
-  if (jogo !== 'sons' && jogo !== 'quiz') {
+  if (jogo !== 'sons' && jogo !== 'quiz' && jogo !== 'direito') {
     return NextResponse.json({ mensagem: 'Jogo inválido.' }, { status: 400 })
   }
 

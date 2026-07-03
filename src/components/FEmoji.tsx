@@ -33,6 +33,10 @@ const MAPA: Record<string, string> = {
   '⏳': 'fluent-emoji:hourglass-not-done',
   '⏱️': 'fluent-emoji:stopwatch',
   '❓': 'fluent-emoji:red-question-mark',
+  '⚖️': 'fluent-emoji:balance-scale',
+  '📜': 'fluent-emoji:scroll',
+  '🚔': 'fluent-emoji:oncoming-police-car',
+  '👷': 'fluent-emoji:construction-worker',
 }
 
 interface Props {

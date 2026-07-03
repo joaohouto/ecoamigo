@@ -20,6 +20,7 @@ const POLL_INTERVAL_MS = 30_000;
 const NOME_JOGO: Record<Jogo, { emoji: string; label: string }> = {
   sons: { emoji: "🎵", label: "Sons" },
   quiz: { emoji: "🌿", label: "Quiz" },
+  direito: { emoji: "⚖️", label: "Direito" },
 };
 
 function Medalha({ pos }: { pos: number }) {

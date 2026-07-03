@@ -30,10 +30,18 @@ const itensMenu: ItemMenu[] = [
   },
   {
     href: "/quiz",
-    titulo: "Quiz Pantanal",
+    titulo: "Quiz do Pantanal",
     descricao: "Responda perguntas sobre o maior santuário natural do Brasil!",
     emoji: "🌿",
     corFundo: "#1565C0",
+    corTexto: "#fff",
+  },
+  {
+    href: "/quiz-direito",
+    titulo: "Quiz do Direito",
+    descricao: "Teste seus conhecimentos jurídicos!",
+    emoji: "⚖️",
+    corFundo: "#722F37",
     corTexto: "#fff",
   },
   {
@@ -107,16 +115,20 @@ export default function Home() {
 
         {/* Cards do menu */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-5xl"
+          className="flex flex-col sm:flex-row gap-6 w-full max-w-5xl"
           variants={variantesContainer}
           initial="oculto"
           animate="visivel"
         >
           {itensMenu.map((item, idx) => (
-            <motion.div key={item.href} variants={variantesCard}>
-              <Link href={item.href} className="block">
+            <motion.div
+              key={item.href}
+              variants={variantesCard}
+              className="flex-1"
+            >
+              <Link href={item.href} className="block h-full">
                 <motion.div
-                  className={`rounded-3xl p-8 cursor-pointer shadow-lg flex flex-col items-center text-center gap-4 select-none transition-shadow ${
+                  className={`h-full rounded-3xl p-8 cursor-pointer shadow-lg flex flex-col items-center text-center gap-4 select-none transition-shadow ${
                     foco === idx && conectado
                       ? "ring-4 ring-yellow-400 ring-offset-4 ring-offset-fundo shadow-2xl"
                       : ""
@@ -125,6 +137,11 @@ export default function Home() {
                     backgroundColor: item.corFundo,
                     color: item.corTexto,
                   }}
+                  animate={
+                    foco === idx && conectado
+                      ? { scale: 1.05, rotate: 1 }
+                      : { scale: 1, rotate: 0 }
+                  }
                   whileHover={{ scale: 1.05, rotate: 1 }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}

@@ -1,0 +1,869 @@
+[
+  {
+    "id": "c01",
+    "dificuldade": "facil",
+    "categoria": "constitucional",
+    "enunciado": "Em que ano foi promulgada a atual Constituição Federal brasileira?",
+    "opcoes": ["1969", "1988", "1946", "1998"],
+    "resposta_correta": 1,
+    "explicacao": "A CF/88, promulgada em 5 de outubro de 1988, é conhecida como 'Constituição Cidadã'."
+  },
+  {
+    "id": "c02",
+    "dificuldade": "facil",
+    "categoria": "constitucional",
+    "enunciado": "Segundo a CF/88, quantos são os Poderes da União, independentes e harmônicos entre si?",
+    "opcoes": ["Dois", "Três", "Quatro", "Cinco"],
+    "resposta_correta": 1,
+    "explicacao": "Executivo, Legislativo e Judiciário, conforme o art. 2º da Constituição Federal."
+  },
+  {
+    "id": "c03",
+    "dificuldade": "facil",
+    "categoria": "constitucional",
+    "enunciado": "Qual artigo da Constituição Federal enumera os direitos e deveres individuais e coletivos, os chamados direitos fundamentais?",
+    "opcoes": ["Art. 1º", "Art. 5º", "Art. 37", "Art. 60"],
+    "resposta_correta": 1,
+    "explicacao": "O art. 5º da CF/88 traz o extenso rol de direitos e garantias fundamentais."
+  },
+  {
+    "id": "c04",
+    "dificuldade": "medio",
+    "categoria": "constitucional",
+    "enunciado": "Quantos são os fundamentos da República Federativa do Brasil previstos no art. 1º da CF/88?",
+    "opcoes": ["Três", "Quatro", "Cinco", "Seis"],
+    "resposta_correta": 2,
+    "explicacao": "São eles: soberania, cidadania, dignidade da pessoa humana, valores sociais do trabalho e da livre iniciativa, e pluralismo político."
+  },
+  {
+    "id": "c05",
+    "dificuldade": "medio",
+    "categoria": "constitucional",
+    "enunciado": "Qual das opções abaixo NÃO integra os Poderes da República previstos no art. 2º da CF/88?",
+    "opcoes": ["Executivo", "Legislativo", "Judiciário", "Moderador"],
+    "resposta_correta": 3,
+    "explicacao": "O Poder Moderador existiu na Constituição de 1824 (Império) e não faz parte da atual tripartição de poderes."
+  },
+  {
+    "id": "c06",
+    "dificuldade": "medio",
+    "categoria": "constitucional",
+    "enunciado": "Além do voto direto e secreto, a soberania popular é exercida, nos termos da CF/88, por meio de:",
+    "opcoes": [
+      "Apenas eleições municipais",
+      "Plebiscito, referendo e iniciativa popular",
+      "Apenas decreto presidencial",
+      "Apenas emenda constitucional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 14 da CF/88 prevê o plebiscito, o referendo e a iniciativa popular como formas de exercício direto da soberania."
+  },
+  {
+    "id": "c07",
+    "dificuldade": "medio",
+    "categoria": "constitucional",
+    "enunciado": "Qual é o quórum exigido para aprovação de uma Emenda Constitucional em cada Casa do Congresso Nacional?",
+    "opcoes": [
+      "Maioria simples em um turno",
+      "Maioria absoluta em um turno",
+      "Três quintos dos votos, em dois turnos de votação",
+      "Unanimidade dos parlamentares"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O art. 60, §2º, da CF/88 exige três quintos dos votos dos membros de cada Casa, em dois turnos de votação."
+  },
+  {
+    "id": "c08",
+    "dificuldade": "medio",
+    "categoria": "constitucional",
+    "enunciado": "As cláusulas pétreas da CF/88 protegem, entre outros temas, qual das alternativas abaixo?",
+    "opcoes": [
+      "O voto direto, secreto, universal e periódico",
+      "O valor do salário mínimo regional",
+      "O sistema tributário nacional",
+      "A idade mínima para o casamento"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O art. 60, §4º, protege a forma federativa, o voto direto/secreto/universal/periódico, a separação dos poderes e os direitos e garantias individuais."
+  },
+  {
+    "id": "c09",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "Segundo a doutrina majoritária, as cláusulas pétreas podem ser suprimidas por qual via?",
+    "opcoes": [
+      "Por emenda constitucional aprovada por 3/5",
+      "Apenas por uma nova Assembleia Nacional Constituinte (poder constituinte originário)",
+      "Por lei complementar específica",
+      "Por referendo popular simples"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "As cláusulas pétreas limitam o poder constituinte derivado (de reforma); apenas o poder constituinte originário poderia rompê-las."
+  },
+  {
+    "id": "c10",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "No Brasil, o controle concentrado de constitucionalidade de leis e atos normativos federais e estaduais é exercido, em regra, por qual tribunal?",
+    "opcoes": [
+      "Superior Tribunal de Justiça (STJ)",
+      "Supremo Tribunal Federal (STF)",
+      "Tribunal Superior Eleitoral (TSE)",
+      "Conselho Nacional de Justiça (CNJ)"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O STF julga ações como ADI, ADC e ADPF, exercendo o controle concentrado de constitucionalidade."
+  },
+  {
+    "id": "c11",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "Qual remédio constitucional protege direito líquido e certo, não amparado por habeas corpus ou habeas data?",
+    "opcoes": [
+      "Mandado de segurança",
+      "Ação civil pública",
+      "Ação popular",
+      "Recurso extraordinário"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Previsto no art. 5º, LXIX, da CF/88, o mandado de segurança tutela direito líquido e certo lesado por ato de autoridade."
+  },
+  {
+    "id": "c12",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "Qual remédio constitucional é cabível diante da falta de norma regulamentadora que torne inviável o exercício de direitos e liberdades constitucionais?",
+    "opcoes": [
+      "Habeas corpus",
+      "Mandado de injunção",
+      "Ação rescisória",
+      "Ação declaratória de constitucionalidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O mandado de injunção, previsto no art. 5º, LXXI, da CF/88, combate a omissão legislativa."
+  },
+  {
+    "id": "c13",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "Segundo o STF (RE 466.343), os tratados internacionais de direitos humanos não aprovados pelo rito do art. 5º, §3º, da CF possuem, em relação à legislação infraconstitucional, status:",
+    "opcoes": [
+      "Supralegal (abaixo da CF, acima das leis)",
+      "De paridade hierárquica com lei ordinária",
+      "Constitucional pleno",
+      "Sem qualquer eficácia interna"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O STF firmou que tratados de direitos humanos não incorporados pelo quórum qualificado têm status supralegal."
+  },
+  {
+    "id": "c14",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "O fenômeno pelo qual uma norma infraconstitucional anterior, materialmente compatível com a nova ordem, é absorvida pela nova Constituição denomina-se:",
+    "opcoes": [
+      "Repristinação",
+      "Recepção",
+      "Mutação constitucional",
+      "Desconstitucionalização"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A recepção permite que normas compatíveis materialmente com a nova Constituição continuem vigentes."
+  },
+  {
+    "id": "c15",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "A alteração do sentido de uma norma constitucional sem mudança do seu texto, por nova interpretação decorrente de transformações sociais, é chamada de:",
+    "opcoes": [
+      "Recepção",
+      "Mutação constitucional",
+      "Revisão constitucional",
+      "Desuetudo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A mutação constitucional altera o sentido da norma pela via interpretativa, sem alteração formal do texto."
+  },
+  {
+    "id": "c16",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "Qual é o efeito, em regra, das decisões do STF em sede de controle concentrado (ADI/ADC), quanto aos demais órgãos do Judiciário e à Administração Pública?",
+    "opcoes": [
+      "Efeito inter partes e não vinculante",
+      "Eficácia erga omnes e efeito vinculante",
+      "Eficácia restrita ao autor da ação",
+      "Efeito meramente recomendatório"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 102, §2º, da CF prevê eficácia contra todos e efeito vinculante para essas decisões."
+  },
+  {
+    "id": "c17",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "No controle difuso, quando o STF declara a inconstitucionalidade de lei incidentalmente, cabe ao Senado Federal, nos termos do art. 52, X, da CF:",
+    "opcoes": [
+      "Revogar a lei declarada inconstitucional",
+      "Suspender a execução da lei, no todo ou em parte",
+      "Editar nova lei substitutiva",
+      "Nada, pois o efeito já é automático e geral"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A literalidade do art. 52, X, atribui ao Senado a suspensão da execução da norma declarada inconstitucional."
+  },
+  {
+    "id": "v01",
+    "dificuldade": "facil",
+    "categoria": "civil",
+    "enunciado": "Segundo o Código Civil, são absolutamente incapazes de exercer pessoalmente os atos da vida civil:",
+    "opcoes": [
+      "Os menores de 16 anos",
+      "Os menores de 18 anos",
+      "Os maiores de 65 anos",
+      "Os relativamente incapazes"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Após o Estatuto da Pessoa com Deficiência (2015), apenas os menores de 16 anos são absolutamente incapazes (art. 3º do CC)."
+  },
+  {
+    "id": "v02",
+    "dificuldade": "facil",
+    "categoria": "civil",
+    "enunciado": "Qual é a idade em que, em regra, se atinge a maioridade civil no Brasil?",
+    "opcoes": ["16 anos", "18 anos", "21 anos", "25 anos"],
+    "resposta_correta": 1,
+    "explicacao": "O art. 5º do Código Civil fixa a maioridade civil aos 18 anos completos."
+  },
+  {
+    "id": "v03",
+    "dificuldade": "facil",
+    "categoria": "civil",
+    "enunciado": "Quanto à formação, o contrato de compra e venda é classificado como:",
+    "opcoes": ["Unilateral", "Bilateral (sinalagmático)", "Gratuito", "Real"],
+    "resposta_correta": 1,
+    "explicacao": "Compra e venda gera obrigações recíprocas para ambas as partes: entregar a coisa e pagar o preço."
+  },
+  {
+    "id": "v04",
+    "dificuldade": "medio",
+    "categoria": "civil",
+    "enunciado": "O dever de reparar dano causado a outrem, independentemente de culpa, nos casos previstos em lei, caracteriza a responsabilidade civil:",
+    "opcoes": ["Subjetiva", "Objetiva", "Contratual pura", "Solidária"],
+    "resposta_correta": 1,
+    "explicacao": "O art. 927, parágrafo único, do CC prevê hipóteses de responsabilidade objetiva, dispensando a prova de culpa."
+  },
+  {
+    "id": "v05",
+    "dificuldade": "medio",
+    "categoria": "civil",
+    "enunciado": "Qual é o prazo geral de prescrição das pretensões, quando a lei não fixar prazo menor?",
+    "opcoes": ["3 anos", "5 anos", "10 anos", "20 anos"],
+    "resposta_correta": 2,
+    "explicacao": "O art. 205 do Código Civil estabelece o prazo geral de 10 anos."
+  },
+  {
+    "id": "v06",
+    "dificuldade": "medio",
+    "categoria": "civil",
+    "enunciado": "Segundo o Código Civil, o casamento válido dissolve-se pela:",
+    "opcoes": [
+      "Separação de fato prolongada",
+      "Morte de um dos cônjuges ou pelo divórcio",
+      "Simples abandono do lar conjugal",
+      "Ausência declarada judicialmente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 1.571 do CC prevê a morte e o divórcio como causas de dissolução do casamento válido."
+  },
+  {
+    "id": "v07",
+    "dificuldade": "medio",
+    "categoria": "civil",
+    "enunciado": "No Direito das Sucessões, o instrumento pelo qual uma pessoa dispõe de seus bens para depois da morte é o(a):",
+    "opcoes": [
+      "Procuração",
+      "Testamento",
+      "Escritura pública de doação",
+      "Contrato de gaveta"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O testamento é ato de última vontade pelo qual o testador dispõe de seu patrimônio para depois de sua morte."
+  },
+  {
+    "id": "v08",
+    "dificuldade": "medio",
+    "categoria": "civil",
+    "enunciado": "A posse exercida com justo título e boa-fé, apta a gerar usucapião em prazo reduzido, é chamada de posse:",
+    "opcoes": [
+      "Violenta",
+      "Precária",
+      "Ad usucapionem, com justo título e boa-fé",
+      "Clandestina"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Justo título e boa-fé caracterizam a posse que fundamenta a usucapião ordinária, de prazo mais curto."
+  },
+  {
+    "id": "v09",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "Qual é o prazo de prescrição da pretensão de reparação civil (responsabilidade civil extracontratual), segundo o Código Civil?",
+    "opcoes": ["1 ano", "3 anos", "5 anos", "10 anos"],
+    "resposta_correta": 1,
+    "explicacao": "O art. 206, §3º, V, do CC fixa em 3 anos o prazo prescricional da pretensão de reparação civil."
+  },
+  {
+    "id": "v10",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "Quantos anos de posse mansa e pacífica, sem justo título, são necessários, em regra, para a usucapião extraordinária de imóvel?",
+    "opcoes": [
+      "5 anos",
+      "10 anos",
+      "15 anos (reduzidos a 10 com moradia habitual)",
+      "20 anos"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O art. 1.238 do CC prevê 15 anos, reduzidos a 10 se o possuidor houver estabelecido moradia habitual ou realizado obras produtivas."
+  },
+  {
+    "id": "v11",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "Na ausência de pacto antenupcial, qual regime de bens vigora automaticamente no casamento?",
+    "opcoes": [
+      "Separação total de bens",
+      "Comunhão universal de bens",
+      "Comunhão parcial de bens",
+      "Participação final nos aquestos"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O art. 1.640 do CC estabelece a comunhão parcial de bens como regime legal supletivo."
+  },
+  {
+    "id": "v12",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "Segundo a jurisprudência consolidada, a configuração do dano moral exige:",
+    "opcoes": [
+      "Prova de prejuízo financeiro efetivo",
+      "Lesão à honra, imagem ou dignidade, independente de prova de prejuízo patrimonial",
+      "Registro prévio de boletim de ocorrência",
+      "Sentença penal condenatória prévia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O dano moral é aferido pela lesão a direitos da personalidade, dispensando prova de prejuízo econômico."
+  },
+  {
+    "id": "v13",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "Quanto à legitimidade para arguir o vício do negócio jurídico, o Código Civil estabelece que:",
+    "opcoes": [
+      "Ambas (nulidade e anulabilidade) só podem ser arguidas pelas partes do negócio",
+      "A nulidade pode ser alegada por qualquer interessado e até de ofício pelo juiz; a anulabilidade, só pelos legitimados em lei",
+      "A anulabilidade pode ser reconhecida de ofício pelo juiz, mas a nulidade não",
+      "Não há diferença prática entre os institutos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 168 do CC permite que a nulidade seja arguida por qualquer interessado e pronunciada de ofício; a anulabilidade depende de provocação (art. 177)."
+  },
+  {
+    "id": "v14",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "Segundo o Código Civil, o negócio jurídico celebrado em estado de perigo é:",
+    "opcoes": [
+      "Nulo de pleno direito",
+      "Anulável",
+      "Válido, mas sujeito à revisão judicial de cláusulas",
+      "Inexistente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 156 do CC classifica o estado de perigo como vício de consentimento que torna o negócio anulável."
+  },
+  {
+    "id": "v15",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "A cláusula penal compensatória, estipulada para o caso de inadimplemento total, tem por função principal:",
+    "opcoes": [
+      "Substituir integralmente as perdas e danos, sem necessidade de prova do prejuízo",
+      "Servir apenas como sanção administrativa",
+      "Extinguir automaticamente a obrigação principal",
+      "Impedir a cobrança de juros moratórios"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A cláusula penal compensatória pré-fixa as perdas e danos, dispensando prova do prejuízo (art. 416 do CC)."
+  },
+  {
+    "id": "v16",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "A 'teoria da imprevisão', que permite a resolução de contratos de execução continuada ou diferida, exige, segundo o Código Civil:",
+    "opcoes": [
+      "Simples desequilíbrio subjetivo entre as partes",
+      "Onerosidade excessiva para uma parte com extrema vantagem para a outra, por acontecimentos extraordinários e imprevisíveis",
+      "Mero atraso no cumprimento da obrigação",
+      "Acordo prévio expresso sobre reajuste"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 478 do CC exige onerosidade excessiva com extrema vantagem para o outro contratante, por acontecimentos extraordinários e imprevisíveis."
+  },
+  {
+    "id": "v17",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "No Direito das Coisas, os direitos reais de garantia previstos no Código Civil incluem, entre outros:",
+    "opcoes": [
+      "Usufruto, uso e habitação",
+      "Penhor, hipoteca e anticrese",
+      "Servidão e superfície",
+      "Enfiteuse e concessão de uso"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Os arts. 1.419 e seguintes do CC tratam do penhor, da hipoteca e da anticrese como direitos reais de garantia."
+  },
+  {
+    "id": "p01",
+    "dificuldade": "facil",
+    "categoria": "penal",
+    "enunciado": "O Código Penal e a legislação brasileira dividem as infrações penais em duas espécies:",
+    "opcoes": [
+      "Crime e contravenção penal",
+      "Crime e delito civil",
+      "Falta grave e crime",
+      "Delito e transgressão administrativa"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A Lei de Introdução ao Código Penal distingue crime (ou delito) de contravenção penal."
+  },
+  {
+    "id": "p02",
+    "dificuldade": "facil",
+    "categoria": "penal",
+    "enunciado": "Após o chamado 'Pacote Anticrime' (Lei 13.964/2019), qual passou a ser o limite máximo de cumprimento de pena privativa de liberdade no Brasil?",
+    "opcoes": ["Não há limite legal", "30 anos", "40 anos", "50 anos"],
+    "resposta_correta": 2,
+    "explicacao": "O art. 75 do CP, alterado em 2019, elevou o limite de 30 para 40 anos."
+  },
+  {
+    "id": "p03",
+    "dificuldade": "facil",
+    "categoria": "penal",
+    "enunciado": "Antes de completar 18 anos, uma pessoa que pratica um ato infracional análogo a crime é submetida a qual legislação?",
+    "opcoes": [
+      "Código Penal",
+      "Estatuto da Criança e do Adolescente (ECA)",
+      "Código Civil",
+      "CLT"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Menores de 18 anos são inimputáveis penalmente e respondem por atos infracionais nos termos do ECA."
+  },
+  {
+    "id": "p04",
+    "dificuldade": "medio",
+    "categoria": "penal",
+    "enunciado": "A excludente de ilicitude que autoriza repelir injusta agressão, atual ou iminente, usando moderadamente os meios necessários, é a(o):",
+    "opcoes": [
+      "Estado de necessidade",
+      "Legítima defesa",
+      "Estrito cumprimento do dever legal",
+      "Exercício regular de direito"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 25 do CP define a legítima defesa nesses termos."
+  },
+  {
+    "id": "p05",
+    "dificuldade": "medio",
+    "categoria": "penal",
+    "enunciado": "O crime que consiste em subtrair coisa alheia móvel mediante grave ameaça ou violência à pessoa é denominado:",
+    "opcoes": ["Furto", "Roubo", "Estelionato", "Apropriação indébita"],
+    "resposta_correta": 1,
+    "explicacao": "O roubo (art. 157 do CP) distingue-se do furto justamente pelo emprego de violência ou grave ameaça."
+  },
+  {
+    "id": "p06",
+    "dificuldade": "medio",
+    "categoria": "penal",
+    "enunciado": "Qual é a principal diferença entre os crimes de furto e roubo?",
+    "opcoes": [
+      "O valor da coisa subtraída",
+      "O emprego de violência ou grave ameaça no roubo",
+      "A reincidência do agente",
+      "O tipo de vítima"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O furto (art. 155) não envolve violência ou grave ameaça; o roubo (art. 157), sim."
+  },
+  {
+    "id": "p07",
+    "dificuldade": "medio",
+    "categoria": "penal",
+    "enunciado": "Segundo o Código Penal, considera-se crime doloso quando o agente:",
+    "opcoes": [
+      "Dá causa ao resultado por imprudência ou negligência",
+      "Quis o resultado ou assumiu o risco de produzi-lo",
+      "Age sem qualquer previsão do resultado",
+      "Apenas prevê o resultado sem aceitar o risco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 18, I, do CP define o dolo direto e o dolo eventual nesses termos."
+  },
+  {
+    "id": "p08",
+    "dificuldade": "medio",
+    "categoria": "penal",
+    "enunciado": "A imputabilidade penal plena, em regra, tem início a partir de qual idade no Brasil?",
+    "opcoes": ["16 anos", "18 anos", "21 anos", "14 anos"],
+    "resposta_correta": 1,
+    "explicacao": "O art. 27 do CP e o art. 228 da CF fixam a inimputabilidade penal dos menores de 18 anos."
+  },
+  {
+    "id": "p09",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "O instituto que extingue a punibilidade estatal pelo decurso de determinado prazo sem o exercício do direito de punir é a(o):",
+    "opcoes": ["Anistia", "Prescrição", "Indulto", "Graça"],
+    "resposta_correta": 1,
+    "explicacao": "A prescrição penal é causa de extinção da punibilidade prevista no art. 107, IV, do CP."
+  },
+  {
+    "id": "p10",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "Qual teoria sobre o nexo de causalidade foi adotada pelo art. 13 do Código Penal?",
+    "opcoes": [
+      "Teoria da causalidade adequada",
+      "Teoria da equivalência dos antecedentes (conditio sine qua non)",
+      "Teoria da imputação objetiva pura",
+      "Teoria da causalidade exclusiva"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 13 do CP adota, como regra, a teoria da equivalência dos antecedentes causais."
+  },
+  {
+    "id": "p11",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "O chamado 'crime impossível', previsto no art. 17 do CP, ocorre quando:",
+    "opcoes": [
+      "O agente desiste voluntariamente de prosseguir na execução",
+      "Por ineficácia absoluta do meio ou impropriedade absoluta do objeto, é impossível consumar o crime",
+      "O agente é inimputável por doença mental",
+      "Há erro de tipo plenamente escusável"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 17 do CP afasta a punição quando o meio ou o objeto tornam absolutamente impossível a consumação."
+  },
+  {
+    "id": "p12",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "Qual princípio penal veda a aplicação de pena sem lei anterior que defina o crime (nullum crimen, nulla poena sine praevia lege)?",
+    "opcoes": [
+      "Princípio da insignificância",
+      "Princípio da legalidade (reserva legal)",
+      "Princípio da culpabilidade",
+      "Princípio da proporcionalidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Previsto no art. 1º do CP e no art. 5º, XXXIX, da CF, o princípio da legalidade é pilar do Direito Penal."
+  },
+  {
+    "id": "p13",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "Segundo a teoria finalista da ação, adotada predominantemente pelo Código Penal após a reforma de 1984, o dolo e a culpa integram:",
+    "opcoes": [
+      "Apenas a culpabilidade",
+      "A tipicidade (elemento subjetivo do tipo)",
+      "Apenas a antijuridicidade",
+      "Nenhum elemento do crime, sendo circunstâncias judiciais"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na teoria finalista, dolo e culpa migram da culpabilidade para o tipo penal, compondo seu elemento subjetivo."
+  },
+  {
+    "id": "p14",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "O concurso de pessoas em que o partícipe induz, instiga ou auxilia materialmente o crime, sem praticar atos executórios do núcleo do tipo, é denominado:",
+    "opcoes": [
+      "Autoria mediata",
+      "Coautoria",
+      "Participação em sentido estrito",
+      "Autoria colateral"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A participação em sentido estrito ocorre quando o agente contribui sem praticar atos de execução do núcleo típico, diferindo da coautoria."
+  },
+  {
+    "id": "p15",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "A diferença entre erro de tipo e erro de proibição está, essencialmente, em que o primeiro incide sobre:",
+    "opcoes": [
+      "A ilicitude da conduta, e o segundo sobre elementos do tipo",
+      "Elementos constitutivos do tipo penal, e o segundo sobre a consciência da ilicitude",
+      "A pena aplicável, e o segundo sobre a competência do juízo",
+      "A capacidade civil, e o segundo sobre a capacidade penal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O erro de tipo (art. 20 do CP) recai sobre elementos do tipo; o erro de proibição (art. 21) recai sobre a consciência da ilicitude."
+  },
+  {
+    "id": "p16",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "Nos crimes qualificados pelo resultado, quando o resultado mais grave é atribuído ao agente a título de culpa, ainda que o crime antecedente seja doloso, configura-se:",
+    "opcoes": [
+      "Crime preterdoloso",
+      "Crime complexo",
+      "Crime habitual",
+      "Crime unissubsistente"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O crime preterdoloso combina dolo no antecedente e culpa no resultado mais grave, como na lesão corporal seguida de morte (art. 129, §3º)."
+  },
+  {
+    "id": "p17",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "A chamada 'teoria da coculpabilidade', discutida na dogmática penal brasileira, sustenta que:",
+    "opcoes": [
+      "O Estado deve ser corresponsabilizado na culpabilidade do agente marginalizado socialmente, mitigando sua reprovação penal",
+      "Todo crime em coautoria deve ter pena automaticamente dobrada",
+      "A culpabilidade é sempre objetiva, independente de juízo de reprovação",
+      "Réus reincidentes não podem invocar excludentes de culpabilidade"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A coculpabilidade discute a corresponsabilidade estatal por desigualdades sociais na formação do agente, podendo influir na medida da reprovação penal."
+  },
+  {
+    "id": "t01",
+    "dificuldade": "facil",
+    "categoria": "trabalhista",
+    "enunciado": "Qual é a jornada de trabalho máxima, em regra, prevista para a maioria dos trabalhadores?",
+    "opcoes": [
+      "6 horas diárias, sem limite semanal",
+      "8 horas diárias e 44 horas semanais",
+      "10 horas diárias e 50 semanais",
+      "12 horas diárias, sem limite semanal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 7º, XIII, da CF e o art. 58 da CLT fixam esse limite geral."
+  },
+  {
+    "id": "t02",
+    "dificuldade": "facil",
+    "categoria": "trabalhista",
+    "enunciado": "Após completar 12 meses de trabalho (período aquisitivo), sem faltas excessivas, o trabalhador tem direito a quantos dias de férias remuneradas?",
+    "opcoes": ["15 dias", "20 dias", "30 dias", "45 dias"],
+    "resposta_correta": 2,
+    "explicacao": "O art. 130 da CLT prevê 30 dias corridos de férias na ausência de faltas injustificadas."
+  },
+  {
+    "id": "t03",
+    "dificuldade": "facil",
+    "categoria": "trabalhista",
+    "enunciado": "A sigla CLT significa:",
+    "opcoes": [
+      "Código de Leis do Trabalho",
+      "Consolidação das Leis do Trabalho",
+      "Convenção Legal do Trabalhador",
+      "Código de Legislação Trabalhista"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A CLT, instituída em 1943, consolidou diversas normas trabalhistas esparsas."
+  },
+  {
+    "id": "t04",
+    "dificuldade": "medio",
+    "categoria": "trabalhista",
+    "enunciado": "O FGTS corresponde a que percentual da remuneração mensal do empregado, depositado mensalmente pelo empregador?",
+    "opcoes": ["5%", "8%", "11%", "13%"],
+    "resposta_correta": 1,
+    "explicacao": "A Lei 8.036/90 fixa o depósito mensal de 8% da remuneração na conta vinculada do FGTS."
+  },
+  {
+    "id": "t05",
+    "dificuldade": "medio",
+    "categoria": "trabalhista",
+    "enunciado": "Em caso de dispensa sem justa causa, além da liberação do FGTS, o empregado tem direito a uma multa rescisória de quanto sobre o saldo da conta?",
+    "opcoes": ["10%", "20%", "40%", "50%"],
+    "resposta_correta": 2,
+    "explicacao": "O art. 18, §1º, da Lei 8.036/90 prevê multa de 40% sobre o saldo do FGTS na dispensa sem justa causa."
+  },
+  {
+    "id": "t06",
+    "dificuldade": "medio",
+    "categoria": "trabalhista",
+    "enunciado": "O 13º salário deve ser pago, em regra, em:",
+    "opcoes": [
+      "Parcela única, até 31 de janeiro",
+      "Duas parcelas, sendo a segunda até 20 de dezembro",
+      "Três parcelas mensais, sem prazo definido",
+      "Não há prazo legal definido"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A praxe legal prevê a primeira parcela até 30 de novembro e a segunda até 20 de dezembro."
+  },
+  {
+    "id": "t07",
+    "dificuldade": "medio",
+    "categoria": "trabalhista",
+    "enunciado": "O instituto que permite compensar o excesso de horas trabalhadas em um dia com a correspondente diminuição em outro, mediante acordo, é o(a):",
+    "opcoes": [
+      "Banco de horas",
+      "Aviso prévio",
+      "Estabilidade provisória",
+      "Adicional noturno"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O banco de horas, previsto no art. 59 da CLT, permite compensação de jornada dentro de determinado período."
+  },
+  {
+    "id": "t08",
+    "dificuldade": "medio",
+    "categoria": "trabalhista",
+    "enunciado": "A estabilidade provisória da empregada gestante, segundo a CF/88 (ADCT), vai da confirmação da gravidez até:",
+    "opcoes": [
+      "O parto",
+      "3 meses após o parto",
+      "5 meses após o parto",
+      "1 ano após o parto"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O art. 10, II, 'b', do ADCT garante estabilidade até 5 meses após o parto."
+  },
+  {
+    "id": "t09",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "Após a Reforma Trabalhista (Lei 13.467/2017), nas hipóteses previstas em lei, o que passou a prevalecer entre o negociado coletivamente e o legislado?",
+    "opcoes": [
+      "O legislado sempre prevalece, sem exceções",
+      "O negociado coletivamente pode prevalecer sobre o legislado, nas hipóteses do art. 611-A da CLT",
+      "Não há hierarquia; decide-se sempre judicialmente",
+      "Apenas o acordo individual prevalece"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 611-A da CLT elenca matérias em que a negociação coletiva prevalece sobre a lei."
+  },
+  {
+    "id": "t10",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "Qual é o prazo prescricional, em regra, para o trabalhador reclamar créditos trabalhistas na Justiça do Trabalho?",
+    "opcoes": [
+      "Até 2 anos após a extinção do contrato, alcançando os créditos dos últimos 5 anos",
+      "1 ano após a extinção do contrato, sem limite retroativo",
+      "5 anos após a extinção do contrato, sem prazo para ajuizar",
+      "10 anos, contados da admissão"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O art. 7º, XXIX, da CF prevê prescrição quinquenal, respeitado o prazo de até 2 anos após a extinção do contrato."
+  },
+  {
+    "id": "t11",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "Os órgãos de primeiro grau da Justiça do Trabalho, responsáveis pelo julgamento inicial dos dissídios individuais, são as(os):",
+    "opcoes": [
+      "Varas do Trabalho",
+      "Juizados Especiais Federais",
+      "Varas Cíveis comuns",
+      "Tribunais de Justiça estaduais"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O art. 111 da CF estrutura a Justiça do Trabalho, tendo as Varas do Trabalho como órgãos de primeiro grau."
+  },
+  {
+    "id": "t12",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "O instituto que garante ao empregado dispensado sem justa causa um período de comunicação prévia (ou pagamento correspondente) antes da rescisão efetiva do contrato é o(a):",
+    "opcoes": [
+      "Aviso prévio",
+      "Auxílio-desemprego",
+      "Vale-transporte",
+      "Adicional de insalubridade"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O aviso prévio, previsto no art. 487 da CLT, é proporcional ao tempo de serviço (Lei 12.506/2011)."
+  },
+  {
+    "id": "t13",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "Segundo a CLT, o grupo econômico para fins de responsabilidade solidária trabalhista caracteriza-se, principalmente, pela:",
+    "opcoes": [
+      "Mera proximidade geográfica entre as empresas",
+      "Direção, controle ou administração de uma empresa sobre as outras, ou por coordenação entre elas, com atuação conjunta",
+      "Simples existência de sócios em comum, sem relação de coordenação",
+      "Celebração de contrato de prestação de serviços entre as empresas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 2º, §§2º e 3º, da CLT prevê o grupo econômico por direção/controle ou por coordenação entre as empresas."
+  },
+  {
+    "id": "t14",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "Segundo o STF (Tema 725, RE 958.252), a terceirização de mão de obra é lícita:",
+    "opcoes": [
+      "Somente para atividades-meio da empresa tomadora",
+      "Tanto para atividades-meio quanto para a atividade-fim da empresa tomadora",
+      "Apenas no setor público",
+      "Somente mediante autorização judicial prévia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O STF fixou tese de que é lícita a terceirização em todas as etapas do processo produtivo, inclusive na atividade-fim."
+  },
+  {
+    "id": "t15",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "No distrato trabalhista (rescisão por acordo, art. 484-A da CLT), introduzido pela Reforma Trabalhista, o empregado pode sacar qual percentual do FGTS e a multa rescisória é reduzida a quanto?",
+    "opcoes": [
+      "100% do saldo e multa de 40%",
+      "80% do saldo e multa de 20%",
+      "50% do saldo e multa de 10%",
+      "Nenhuma liberação do FGTS é permitida nessa modalidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 484-A da CLT prevê, no distrato por acordo, saque de até 80% do FGTS e multa rescisória de 20% sobre o saldo."
+  },
+  {
+    "id": "t16",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "Após a Reforma Trabalhista (Lei 13.467/2017), as chamadas 'horas in itinere' (tempo de deslocamento em condução fornecida pelo empregador):",
+    "opcoes": [
+      "Continuam sempre computadas como tempo à disposição do empregador",
+      "Deixaram de ser computadas como tempo à disposição do empregador, por alteração do art. 58, §2º, da CLT",
+      "Passaram a ser pagas sempre em dobro",
+      "Não podem mais ser objeto de norma coletiva"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 58, §2º, da CLT, alterado em 2017, retirou expressamente as horas in itinere do conceito de tempo à disposição do empregador."
+  },
+  {
+    "id": "t17",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "Segundo o art. 114, VIII, da CF, a competência para executar, de ofício, as contribuições previdenciárias decorrentes das condenações que proferir é da:",
+    "opcoes": [
+      "Justiça Federal comum",
+      "Justiça do Trabalho",
+      "Justiça Estadual",
+      "Justiça Eleitoral"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 114, VIII, da CF atribui à Justiça do Trabalho a execução, de ofício, das contribuições previdenciárias decorrentes de suas sentenças."
+  }
+]
