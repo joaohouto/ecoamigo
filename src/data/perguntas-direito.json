@@ -4,7 +4,12 @@
     "dificuldade": "facil",
     "categoria": "constitucional",
     "enunciado": "Em que ano foi promulgada a atual Constituição Federal brasileira?",
-    "opcoes": ["1969", "1988", "1946", "1998"],
+    "opcoes": [
+      "1969",
+      "1988",
+      "1946",
+      "1998"
+    ],
     "resposta_correta": 1,
     "explicacao": "A CF/88, promulgada em 5 de outubro de 1988, é conhecida como 'Constituição Cidadã'."
   },
@@ -13,7 +18,12 @@
     "dificuldade": "facil",
     "categoria": "constitucional",
     "enunciado": "Segundo a CF/88, quantos são os Poderes da União, independentes e harmônicos entre si?",
-    "opcoes": ["Dois", "Três", "Quatro", "Cinco"],
+    "opcoes": [
+      "Dois",
+      "Três",
+      "Quatro",
+      "Cinco"
+    ],
     "resposta_correta": 1,
     "explicacao": "Executivo, Legislativo e Judiciário, conforme o art. 2º da Constituição Federal."
   },
@@ -22,7 +32,12 @@
     "dificuldade": "facil",
     "categoria": "constitucional",
     "enunciado": "Qual artigo da Constituição Federal enumera os direitos e deveres individuais e coletivos, os chamados direitos fundamentais?",
-    "opcoes": ["Art. 1º", "Art. 5º", "Art. 37", "Art. 60"],
+    "opcoes": [
+      "Art. 1º",
+      "Art. 5º",
+      "Art. 37",
+      "Art. 60"
+    ],
     "resposta_correta": 1,
     "explicacao": "O art. 5º da CF/88 traz o extenso rol de direitos e garantias fundamentais."
   },
@@ -31,7 +46,12 @@
     "dificuldade": "medio",
     "categoria": "constitucional",
     "enunciado": "Quantos são os fundamentos da República Federativa do Brasil previstos no art. 1º da CF/88?",
-    "opcoes": ["Três", "Quatro", "Cinco", "Seis"],
+    "opcoes": [
+      "Três",
+      "Quatro",
+      "Cinco",
+      "Seis"
+    ],
     "resposta_correta": 2,
     "explicacao": "São eles: soberania, cidadania, dignidade da pessoa humana, valores sociais do trabalho e da livre iniciativa, e pluralismo político."
   },
@@ -40,7 +60,12 @@
     "dificuldade": "medio",
     "categoria": "constitucional",
     "enunciado": "Qual das opções abaixo NÃO integra os Poderes da República previstos no art. 2º da CF/88?",
-    "opcoes": ["Executivo", "Legislativo", "Judiciário", "Moderador"],
+    "opcoes": [
+      "Executivo",
+      "Legislativo",
+      "Judiciário",
+      "Moderador"
+    ],
     "resposta_correta": 3,
     "explicacao": "O Poder Moderador existiu na Constituição de 1824 (Império) e não faz parte da atual tripartição de poderes."
   },
@@ -231,7 +256,12 @@
     "dificuldade": "facil",
     "categoria": "civil",
     "enunciado": "Qual é a idade em que, em regra, se atinge a maioridade civil no Brasil?",
-    "opcoes": ["16 anos", "18 anos", "21 anos", "25 anos"],
+    "opcoes": [
+      "16 anos",
+      "18 anos",
+      "21 anos",
+      "25 anos"
+    ],
     "resposta_correta": 1,
     "explicacao": "O art. 5º do Código Civil fixa a maioridade civil aos 18 anos completos."
   },
@@ -240,7 +270,12 @@
     "dificuldade": "facil",
     "categoria": "civil",
     "enunciado": "Quanto à formação, o contrato de compra e venda é classificado como:",
-    "opcoes": ["Unilateral", "Bilateral (sinalagmático)", "Gratuito", "Real"],
+    "opcoes": [
+      "Unilateral",
+      "Bilateral (sinalagmático)",
+      "Gratuito",
+      "Real"
+    ],
     "resposta_correta": 1,
     "explicacao": "Compra e venda gera obrigações recíprocas para ambas as partes: entregar a coisa e pagar o preço."
   },
@@ -249,7 +284,12 @@
     "dificuldade": "medio",
     "categoria": "civil",
     "enunciado": "O dever de reparar dano causado a outrem, independentemente de culpa, nos casos previstos em lei, caracteriza a responsabilidade civil:",
-    "opcoes": ["Subjetiva", "Objetiva", "Contratual pura", "Solidária"],
+    "opcoes": [
+      "Subjetiva",
+      "Objetiva",
+      "Contratual pura",
+      "Solidária"
+    ],
     "resposta_correta": 1,
     "explicacao": "O art. 927, parágrafo único, do CC prevê hipóteses de responsabilidade objetiva, dispensando a prova de culpa."
   },
@@ -258,7 +298,12 @@
     "dificuldade": "medio",
     "categoria": "civil",
     "enunciado": "Qual é o prazo geral de prescrição das pretensões, quando a lei não fixar prazo menor?",
-    "opcoes": ["3 anos", "5 anos", "10 anos", "20 anos"],
+    "opcoes": [
+      "3 anos",
+      "5 anos",
+      "10 anos",
+      "20 anos"
+    ],
     "resposta_correta": 2,
     "explicacao": "O art. 205 do Código Civil estabelece o prazo geral de 10 anos."
   },
@@ -309,7 +354,12 @@
     "dificuldade": "dificil",
     "categoria": "civil",
     "enunciado": "Qual é o prazo de prescrição da pretensão de reparação civil (responsabilidade civil extracontratual), segundo o Código Civil?",
-    "opcoes": ["1 ano", "3 anos", "5 anos", "10 anos"],
+    "opcoes": [
+      "1 ano",
+      "3 anos",
+      "5 anos",
+      "10 anos"
+    ],
     "resposta_correta": 1,
     "explicacao": "O art. 206, §3º, V, do CC fixa em 3 anos o prazo prescricional da pretensão de reparação civil."
   },
@@ -444,7 +494,12 @@
     "dificuldade": "facil",
     "categoria": "penal",
     "enunciado": "Após o chamado 'Pacote Anticrime' (Lei 13.964/2019), qual passou a ser o limite máximo de cumprimento de pena privativa de liberdade no Brasil?",
-    "opcoes": ["Não há limite legal", "30 anos", "40 anos", "50 anos"],
+    "opcoes": [
+      "Não há limite legal",
+      "30 anos",
+      "40 anos",
+      "50 anos"
+    ],
     "resposta_correta": 2,
     "explicacao": "O art. 75 do CP, alterado em 2019, elevou o limite de 30 para 40 anos."
   },
@@ -481,7 +536,12 @@
     "dificuldade": "medio",
     "categoria": "penal",
     "enunciado": "O crime que consiste em subtrair coisa alheia móvel mediante grave ameaça ou violência à pessoa é denominado:",
-    "opcoes": ["Furto", "Roubo", "Estelionato", "Apropriação indébita"],
+    "opcoes": [
+      "Furto",
+      "Roubo",
+      "Estelionato",
+      "Apropriação indébita"
+    ],
     "resposta_correta": 1,
     "explicacao": "O roubo (art. 157 do CP) distingue-se do furto justamente pelo emprego de violência ou grave ameaça."
   },
@@ -518,7 +578,12 @@
     "dificuldade": "medio",
     "categoria": "penal",
     "enunciado": "A imputabilidade penal plena, em regra, tem início a partir de qual idade no Brasil?",
-    "opcoes": ["16 anos", "18 anos", "21 anos", "14 anos"],
+    "opcoes": [
+      "16 anos",
+      "18 anos",
+      "21 anos",
+      "14 anos"
+    ],
     "resposta_correta": 1,
     "explicacao": "O art. 27 do CP e o art. 228 da CF fixam a inimputabilidade penal dos menores de 18 anos."
   },
@@ -527,7 +592,12 @@
     "dificuldade": "dificil",
     "categoria": "penal",
     "enunciado": "O instituto que extingue a punibilidade estatal pelo decurso de determinado prazo sem o exercício do direito de punir é a(o):",
-    "opcoes": ["Anistia", "Prescrição", "Indulto", "Graça"],
+    "opcoes": [
+      "Anistia",
+      "Prescrição",
+      "Indulto",
+      "Graça"
+    ],
     "resposta_correta": 1,
     "explicacao": "A prescrição penal é causa de extinção da punibilidade prevista no art. 107, IV, do CP."
   },
@@ -662,7 +732,12 @@
     "dificuldade": "facil",
     "categoria": "trabalhista",
     "enunciado": "Após completar 12 meses de trabalho (período aquisitivo), sem faltas excessivas, o trabalhador tem direito a quantos dias de férias remuneradas?",
-    "opcoes": ["15 dias", "20 dias", "30 dias", "45 dias"],
+    "opcoes": [
+      "15 dias",
+      "20 dias",
+      "30 dias",
+      "45 dias"
+    ],
     "resposta_correta": 2,
     "explicacao": "O art. 130 da CLT prevê 30 dias corridos de férias na ausência de faltas injustificadas."
   },
@@ -685,7 +760,12 @@
     "dificuldade": "medio",
     "categoria": "trabalhista",
     "enunciado": "O FGTS corresponde a que percentual da remuneração mensal do empregado, depositado mensalmente pelo empregador?",
-    "opcoes": ["5%", "8%", "11%", "13%"],
+    "opcoes": [
+      "5%",
+      "8%",
+      "11%",
+      "13%"
+    ],
     "resposta_correta": 1,
     "explicacao": "A Lei 8.036/90 fixa o depósito mensal de 8% da remuneração na conta vinculada do FGTS."
   },
@@ -694,7 +774,12 @@
     "dificuldade": "medio",
     "categoria": "trabalhista",
     "enunciado": "Em caso de dispensa sem justa causa, além da liberação do FGTS, o empregado tem direito a uma multa rescisória de quanto sobre o saldo da conta?",
-    "opcoes": ["10%", "20%", "40%", "50%"],
+    "opcoes": [
+      "10%",
+      "20%",
+      "40%",
+      "50%"
+    ],
     "resposta_correta": 2,
     "explicacao": "O art. 18, §1º, da Lei 8.036/90 prevê multa de 40% sobre o saldo do FGTS na dispensa sem justa causa."
   },
@@ -865,5 +950,313 @@
     ],
     "resposta_correta": 1,
     "explicacao": "O art. 114, VIII, da CF atribui à Justiça do Trabalho a execução, de ofício, das contribuições previdenciárias decorrentes de suas sentenças."
+  },
+  {
+    "id": "am01",
+    "dificuldade": "facil",
+    "categoria": "ambiental",
+    "enunciado": "Qual artigo da Constituição Federal garante a todos o direito ao meio ambiente ecologicamente equilibrado?",
+    "opcoes": [
+      "Art. 5º",
+      "Art. 170",
+      "Art. 225",
+      "Art. 6º"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O art. 225 da CF/88 consagra o meio ambiente ecologicamente equilibrado como bem de uso comum do povo e essencial à sadia qualidade de vida."
+  },
+  {
+    "id": "am02",
+    "dificuldade": "facil",
+    "categoria": "ambiental",
+    "enunciado": "Qual lei federal instituiu a Política Nacional do Meio Ambiente?",
+    "opcoes": [
+      "Lei 9.605/1998",
+      "Lei 6.938/1981",
+      "Lei 12.651/2012",
+      "Lei 9.985/2000"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Lei 6.938/1981 instituiu a Política Nacional do Meio Ambiente (PNMA) e criou o SISNAMA."
+  },
+  {
+    "id": "am03",
+    "dificuldade": "facil",
+    "categoria": "ambiental",
+    "enunciado": "Como é chamado o princípio segundo o qual quem causa dano ao meio ambiente deve arcar com os custos para repará-lo?",
+    "opcoes": [
+      "Princípio da prevenção",
+      "Princípio do poluidor-pagador",
+      "Princípio da precaução",
+      "Princípio da informação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O princípio do poluidor-pagador atribui ao causador da poluição o custo social da degradação que provoca."
+  },
+  {
+    "id": "am04",
+    "dificuldade": "medio",
+    "categoria": "ambiental",
+    "enunciado": "Qual princípio orienta a adoção de medidas de precaução mesmo quando não há certeza científica absoluta sobre o dano ambiental?",
+    "opcoes": [
+      "Princípio da precaução",
+      "Princípio da reparação integral",
+      "Princípio da participação",
+      "Princípio da ubiquidade"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O princípio da precaução determina agir com cautela diante de risco potencial, ainda que a ciência não tenha certeza plena sobre o dano."
+  },
+  {
+    "id": "am05",
+    "dificuldade": "medio",
+    "categoria": "ambiental",
+    "enunciado": "Qual lei é conhecida como a Lei de Crimes Ambientais?",
+    "opcoes": [
+      "Lei 9.433/1997",
+      "Lei 9.605/1998",
+      "Lei 11.428/2006",
+      "Lei 12.305/2010"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Lei 9.605/1998 tipifica as condutas e atividades lesivas ao meio ambiente e prevê sanções penais e administrativas."
+  },
+  {
+    "id": "am06",
+    "dificuldade": "medio",
+    "categoria": "ambiental",
+    "enunciado": "O que é o licenciamento ambiental?",
+    "opcoes": [
+      "Um imposto cobrado de empresas poluidoras",
+      "Um procedimento administrativo para autorizar atividades potencialmente poluidoras",
+      "Um selo de qualidade concedido a produtos recicláveis",
+      "Um tipo de seguro obrigatório contra desastres naturais"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O licenciamento ambiental é o procedimento pelo qual o órgão competente autoriza a localização, instalação e operação de empreendimentos que utilizam recursos ambientais."
+  },
+  {
+    "id": "am07",
+    "dificuldade": "medio",
+    "categoria": "ambiental",
+    "enunciado": "Segundo a CF/88, como é classificada a responsabilidade civil por dano ambiental?",
+    "opcoes": [
+      "Subjetiva, exige comprovação de culpa",
+      "Objetiva, independe de culpa",
+      "Não existe responsabilidade civil ambiental",
+      "Apenas penal, nunca civil"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A responsabilidade civil ambiental é objetiva (art. 14, §1º, da Lei 6.938/81): basta o nexo entre a atividade e o dano, sem necessidade de provar culpa."
+  },
+  {
+    "id": "am08",
+    "dificuldade": "dificil",
+    "categoria": "ambiental",
+    "enunciado": "O que caracteriza o chamado 'dano ambiental de forma tríplice' (tríplice responsabilização) no direito brasileiro?",
+    "opcoes": [
+      "A cumulação de responsabilidade civil, penal e administrativa pelo mesmo fato",
+      "A divisão do dano entre três órgãos ambientais diferentes",
+      "A obrigação de indenizar três vítimas distintas",
+      "A necessidade de três laudos periciais para configurar o dano"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No direito ambiental brasileiro, um mesmo fato pode gerar, cumulativamente e de forma independente, responsabilização civil, penal e administrativa."
+  },
+  {
+    "id": "am09",
+    "dificuldade": "dificil",
+    "categoria": "ambiental",
+    "enunciado": "Qual lei instituiu o Sistema Nacional de Unidades de Conservação da Natureza (SNUC)?",
+    "opcoes": [
+      "Lei 9.985/2000",
+      "Lei 12.651/2012",
+      "Lei 9.795/1999",
+      "Lei 11.445/2007"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A Lei 9.985/2000 instituiu o SNUC, estabelecendo critérios para criação e gestão de unidades de conservação, como parques e reservas."
+  },
+  {
+    "id": "am10",
+    "dificuldade": "dificil",
+    "categoria": "ambiental",
+    "enunciado": "O princípio da função socioambiental da propriedade determina que:",
+    "opcoes": [
+      "A propriedade privada é um direito absoluto e ilimitado",
+      "O uso da propriedade deve conciliar interesses econômicos com a preservação ambiental",
+      "Apenas propriedades rurais têm função ambiental",
+      "O Estado deve desapropriar toda propriedade com vegetação nativa"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A função socioambiental da propriedade (arts. 5º, XXIII, e 186, II, da CF) condiciona o exercício do direito de propriedade à preservação do meio ambiente."
+  },
+  {
+    "id": "c18",
+    "dificuldade": "facil",
+    "categoria": "constitucional",
+    "enunciado": "Qual princípio constitucional é considerado o fundamento central de todos os direitos fundamentais?",
+    "opcoes": [
+      "Princípio da legalidade",
+      "Princípio da dignidade da pessoa humana",
+      "Princípio da isonomia",
+      "Princípio da anterioridade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A dignidade da pessoa humana (art. 1º, III, CF) é fundamento da República e irradia efeitos sobre todo o ordenamento jurídico."
+  },
+  {
+    "id": "c19",
+    "dificuldade": "medio",
+    "categoria": "constitucional",
+    "enunciado": "O que são as chamadas 'cláusulas pétreas' na Constituição Federal?",
+    "opcoes": [
+      "Normas que só podem ser alteradas por plebiscito",
+      "Matérias que não podem ser objeto de emenda tendente a aboli-las",
+      "Artigos revogados que permanecem no texto por tradição",
+      "Regras aplicáveis apenas em estado de sítio"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 60, §4º, da CF lista as cláusulas pétreas: forma federativa, voto direto/secreto/universal/periódico, separação dos Poderes e direitos e garantias individuais."
+  },
+  {
+    "id": "c20",
+    "dificuldade": "dificil",
+    "categoria": "constitucional",
+    "enunciado": "O princípio da separação dos Poderes, previsto no art. 2º da CF, é tecnicamente melhor descrito como:",
+    "opcoes": [
+      "Separação absoluta, sem qualquer interferência entre os Poderes",
+      "Independência e harmonia entre Poderes, com sistema de freios e contrapesos",
+      "Subordinação do Judiciário ao Executivo",
+      "Concentração de funções em um único órgão central"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Os Poderes são independentes e harmônicos entre si, exercendo controle recíproco por meio do sistema de checks and balances (freios e contrapesos)."
+  },
+  {
+    "id": "v18",
+    "dificuldade": "facil",
+    "categoria": "civil",
+    "enunciado": "No Código Civil, a capacidade civil plena para praticar todos os atos da vida civil é adquirida, em regra, aos:",
+    "opcoes": [
+      "16 anos",
+      "18 anos",
+      "21 anos",
+      "14 anos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O art. 5º do Código Civil estabelece que a menoridade cessa aos 18 anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil."
+  },
+  {
+    "id": "v19",
+    "dificuldade": "medio",
+    "categoria": "civil",
+    "enunciado": "O princípio da boa-fé objetiva nos contratos exige que as partes:",
+    "opcoes": [
+      "Ajam apenas conforme seus interesses individuais",
+      "Ajam com lealdade, transparência e cooperação mútua",
+      "Registrem o contrato em cartório obrigatoriamente",
+      "Renunciem a qualquer direito de indenização"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A boa-fé objetiva (art. 422, CC) impõe deveres de lealdade, informação e cooperação entre os contratantes, além do simples cumprimento literal do contrato."
+  },
+  {
+    "id": "v20",
+    "dificuldade": "dificil",
+    "categoria": "civil",
+    "enunciado": "O princípio da função social do contrato, previsto no Código Civil, significa que:",
+    "opcoes": [
+      "O contrato deve beneficiar exclusivamente uma das partes",
+      "O contrato não pode ser cumprido se prejudicar terceiros de qualquer forma",
+      "A liberdade contratual deve ser exercida em consonância com os interesses sociais",
+      "Todo contrato precisa de finalidade filantrópica"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O art. 421 do CC estabelece que a liberdade de contratar será exercida em razão e nos limites da função social do contrato."
+  },
+  {
+    "id": "p18",
+    "dificuldade": "facil",
+    "categoria": "penal",
+    "enunciado": "O princípio penal segundo o qual 'não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal' é o princípio da:",
+    "opcoes": [
+      "Presunção de inocência",
+      "Legalidade",
+      "Individualização da pena",
+      "Proporcionalidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O princípio da legalidade (art. 5º, XXXIX, CF, e art. 1º do Código Penal) exige lei prévia definindo o crime e a pena."
+  },
+  {
+    "id": "p19",
+    "dificuldade": "medio",
+    "categoria": "penal",
+    "enunciado": "O princípio 'in dubio pro reo' determina que:",
+    "opcoes": [
+      "Em caso de dúvida, decide-se contra o réu",
+      "Em caso de dúvida, decide-se em favor do réu",
+      "O réu deve provar sua inocência",
+      "A dúvida sempre anula o processo por completo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Decorrência da presunção de inocência, o in dubio pro reo determina que, havendo dúvida razoável, a decisão deve favorecer o acusado."
+  },
+  {
+    "id": "p20",
+    "dificuldade": "dificil",
+    "categoria": "penal",
+    "enunciado": "O princípio da intervenção mínima no Direito Penal estabelece que:",
+    "opcoes": [
+      "O Direito Penal deve punir toda e qualquer conduta ilícita",
+      "O Direito Penal só deve intervir quando outros ramos do Direito forem insuficientes para proteger o bem jurídico",
+      "As penas devem ser sempre a pena máxima prevista em lei",
+      "O juiz deve intervir minimamente no processo, delegando decisões ao júri"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A intervenção mínima (ultima ratio) reserva o Direito Penal para a proteção dos bens jurídicos mais relevantes, quando outras esferas do Direito não bastam."
+  },
+  {
+    "id": "t18",
+    "dificuldade": "facil",
+    "categoria": "trabalhista",
+    "enunciado": "O princípio basilar do Direito do Trabalho, que busca compensar a hipossuficiência do trabalhador diante do empregador, é o princípio da:",
+    "opcoes": [
+      "Proteção",
+      "Autonomia da vontade",
+      "Livre concorrência",
+      "Legalidade estrita"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O princípio da proteção orienta todo o Direito do Trabalho, buscando equilibrar a relação entre empregado e empregador, naturalmente desigual."
+  },
+  {
+    "id": "t19",
+    "dificuldade": "medio",
+    "categoria": "trabalhista",
+    "enunciado": "O princípio da primazia da realidade, no Direito do Trabalho, significa que:",
+    "opcoes": [
+      "Contratos verbais nunca têm validade",
+      "Prevalecem os fatos concretamente verificados sobre o que consta em documentos formais",
+      "Somente provas documentais podem ser usadas em juízo",
+      "O empregador decide unilateralmente a realidade contratual"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Pela primazia da realidade, o que efetivamente ocorre na relação de trabalho prevalece sobre o que está escrito em contratos ou registros formais."
+  },
+  {
+    "id": "t20",
+    "dificuldade": "dificil",
+    "categoria": "trabalhista",
+    "enunciado": "O princípio da irrenunciabilidade dos direitos trabalhistas implica que:",
+    "opcoes": [
+      "O trabalhador pode renunciar livremente a qualquer direito previsto em lei",
+      "Direitos trabalhistas de natureza indisponível não podem ser objeto de renúncia válida pelo empregado",
+      "Apenas o empregador pode renunciar a direitos contratuais",
+      "Todo acordo entre as partes é automaticamente inválido"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Por serem normas de ordem pública e proteção social, os direitos trabalhistas indisponíveis não podem ser objeto de renúncia válida pelo próprio trabalhador."
   }
 ]

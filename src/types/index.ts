@@ -11,6 +11,7 @@ export type CategoriaDireito =
   | 'civil'
   | 'penal'
   | 'trabalhista'
+  | 'ambiental'
 
 export type DificuldadePergunta = 'facil' | 'medio' | 'dificil'
 

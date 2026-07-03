@@ -46,6 +46,18 @@ function embaralhar<T>(arr: T[]): T[] {
   return c
 }
 
+// Embaralha a ordem das alternativas de uma pergunta, recalculando o índice
+// da resposta correta. Sem isso, a posição da resposta certa fica presa à
+// ordem em que ela foi digitada no banco de perguntas (ex: sempre em "B").
+function embaralharOpcoes(pergunta: Pergunta): Pergunta {
+  const indices = embaralhar(pergunta.opcoes.map((_, i) => i))
+  return {
+    ...pergunta,
+    opcoes: indices.map((i) => pergunta.opcoes[i]),
+    resposta_correta: indices.indexOf(pergunta.resposta_correta),
+  }
+}
+
 type FaseRodada = 'respondendo' | 'feedback'
 
 // ---------------------------------------------------------------------------
@@ -410,7 +422,7 @@ export default function QuizPage() {
     const faceis   = embaralhar(banco.filter(p => p.dificuldade === 'facil')).slice(0, 3)
     const medias   = embaralhar(banco.filter(p => p.dificuldade === 'medio')).slice(0, 4)
     const dificeis = embaralhar(banco.filter(p => p.dificuldade === 'dificil')).slice(0, 3)
-    const sorteadas = embaralhar([...faceis, ...medias, ...dificeis])
+    const sorteadas = embaralhar([...faceis, ...medias, ...dificeis]).map(embaralharOpcoes)
     setRodada(sorteadas)
     setIndice(0)
     setSelecionado(null)
