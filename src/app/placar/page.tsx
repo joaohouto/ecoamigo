@@ -380,6 +380,7 @@ function FormRegistro({
 export default function PlacarPage() {
   const { estado, jogoAtual, pontuacao, nomeJogador, resetar, setNome } =
     useGameStore();
+  const { conectado, tipo } = useGamepadStatus();
   const {
     placarLocal,
     placarGlobal,
@@ -568,9 +569,12 @@ export default function PlacarPage() {
       <div className="flex justify-center mt-2">
         <Link
           href="/"
-          className="px-8 py-3 bg-marrom-terra text-white rounded-full text-lg font-bold hover:opacity-90 transition-opacity shadow"
+          className="flex items-center gap-2 px-8 py-3 bg-marrom-terra text-white rounded-full text-lg font-bold hover:opacity-90 transition-opacity shadow"
           style={{ fontFamily: "var(--font-fredoka)" }}
         >
+          {conectado && (
+            <GamepadIcon botao="voltar" tipo={tipo} padrao size={22} />
+          )}
           ← Início
         </Link>
       </div>
