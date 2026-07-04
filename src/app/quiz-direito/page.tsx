@@ -28,6 +28,7 @@ const EMOJI_CATEGORIA: Record<string, string> = {
   civil: "📜",
   penal: "🚔",
   trabalhista: "👷",
+  ambiental: "🌳",
 };
 
 const LABEL_CATEGORIA: Record<string, string> = {
@@ -35,6 +36,7 @@ const LABEL_CATEGORIA: Record<string, string> = {
   civil: "Civil",
   penal: "Penal",
   trabalhista: "Trabalhista",
+  ambiental: "Ambiental",
 };
 
 function embaralhar<T>(arr: T[]): T[] {
@@ -44,6 +46,18 @@ function embaralhar<T>(arr: T[]): T[] {
     [c[i], c[j]] = [c[j], c[i]];
   }
   return c;
+}
+
+// Embaralha a ordem das alternativas de uma pergunta, recalculando o índice
+// da resposta correta. Sem isso, a posição da resposta certa fica presa à
+// ordem em que ela foi digitada no banco de perguntas (ex: sempre em "B").
+function embaralharOpcoes(pergunta: PerguntaDireito): PerguntaDireito {
+  const indices = embaralhar(pergunta.opcoes.map((_, i) => i));
+  return {
+    ...pergunta,
+    opcoes: indices.map((i) => pergunta.opcoes[i]),
+    resposta_correta: indices.indexOf(pergunta.resposta_correta),
+  };
 }
 
 type FaseRodada = "respondendo" | "feedback";
@@ -114,8 +128,8 @@ function TelaInicio({ onIniciar }: { onIniciar: () => void }) {
             {BONUS_RAPIDO} pts!
           </li>
           <li className="flex items-center gap-2">
-            <FEmoji size={20}>🗂️</FEmoji> Temas: Constitucional, Civil, Penal e
-            Trabalhista
+            <FEmoji size={20}>🗂️</FEmoji> Temas: Constitucional, Civil, Penal,
+            Trabalhista e Ambiental
           </li>
         </ul>
       </motion.div>
@@ -503,7 +517,9 @@ export default function QuizDireitoPage() {
     const dificeis = embaralhar(
       banco.filter((p) => p.dificuldade === "dificil"),
     ).slice(0, 3);
-    const sorteadas = embaralhar([...faceis, ...medias, ...dificeis]);
+    const sorteadas = embaralhar([...faceis, ...medias, ...dificeis]).map(
+      embaralharOpcoes,
+    );
     setRodada(sorteadas);
     setIndice(0);
     setSelecionado(null);
